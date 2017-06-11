@@ -8,9 +8,7 @@ categories:
   - 强化
 date: 2017-01-23 15:40:41
 ---
-
-<img src="2017/01/23/24/terminal-icon.png" width="480px" alt="Terminal" title="终端">
-
+<img src="/2017/01/23/24/terminal-icon.png" width=450px alt="Terminal" title="终端">
 Terminal终端又方便又好用，可惜在Windows8.1平台上不提供。这次就安装了MSys2，实现Windows上的Linux环境。
 <!--more-->
 
