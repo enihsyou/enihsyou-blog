@@ -8,7 +8,7 @@ high_res_favicon: /images/high_res_favicon.png
 apple_touch_icon: /images/high_res_favicon.png
 
 # Set default keywords (Use a comma to separate)
-keywords: "九条涼果, enihsyou"
+keywords: "九条涼果, enihsyou, 柒小曦, 果, Shane, Haruto Huang"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -37,7 +37,7 @@ canonical: true
 seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
-# subtitle: Subtitle
+subtitle: Subtitle
 index_with_subtitle: true
 
 # ---------------------------------------------------------------
@@ -212,8 +212,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
-  #display: always
+#  display: post
+  display: always
   #display: hide
   #display: remove
 
@@ -246,10 +246,10 @@ links:
 scroll_to_more: true
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: true
+save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: false
+excerpt_description: true
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
@@ -261,7 +261,7 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: true
+  updated_at: false
   categories: true
 
 # Post wordcount display settings

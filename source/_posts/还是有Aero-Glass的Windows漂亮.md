@@ -43,3 +43,5 @@ Windows Vista加入的Aero Glass毛玻璃特效的那种朦胧美感，或许是
 *   Aero Glass for Win8.1+ v1.5.2 [Aero Glass for Windows 10 [14393] 1.5.2 x64 RePack by zeUs.H.zip](c72cd1a91f69f124789381d9a33a7265.zip)
 
 只适用于Windows 10 RedStone 10.0.14393。
+
+*   Aero Glass for Win8.1+ v1.5.3 [Aero Glass for Windows 10 RS1 1.5.3 x64 RePack by zeUs.H.zip](AB00AB2B8CD4C862493F6A5C3D4514BB17679DD1.zip)
