@@ -3,11 +3,10 @@ title: WHITE ALBUM2 攻略完成
 id: 9
 tags:
   - AQUAPLUS
-  - GAL
   - Leaf
   - 丸戸史明
 categories:
-  - GAL
+  - GalGame
 date: 2015-07-31 23:35:48
 ---
 
