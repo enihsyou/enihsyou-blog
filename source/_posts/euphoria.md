@@ -1,9 +1,18 @@
 ---
 title: euphoria
 date: 2017-07-18 16:36:13
+id: 36
 tags:
+  - Guro
+  - Hentai
+  - 猎奇
+  - CLOCKUP
+  - 和泉万夜
+categories:
+  - GalGame
 ---
-{% asset_img euphoria-cover-art.png "euphoria Logo" %}
+{% asset_img euphoria-cover-art.png "euphoria" %}
+
 说是纯爱故事，可这等变态扭曲的爱情，实在是难叫人接受。
 3年前听说GalGame吧有12神器，其中一款就叫euphoria，
 好吧其实这不是当初寻找这游戏的起因，真正的原因是 在eden*通关之后，寻找剧情吸引人的催泪向作品，入选果眼的有ef 沙耶之歌 CLANNAD 还有就是这euphoria了。

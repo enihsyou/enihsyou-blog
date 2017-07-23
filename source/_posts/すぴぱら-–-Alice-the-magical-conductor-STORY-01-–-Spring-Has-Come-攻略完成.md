@@ -3,9 +3,8 @@ title: すぴぱら – Alice the magical conductor. STORY #01 – Spring Has Co
 id: 3
 tags:
   - minori
-  - すぴぱら
 categories:
-  - GAL
+  - GalGame
 date: 2015-02-27 20:07:51
 ---
 
