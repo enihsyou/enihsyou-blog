@@ -86,7 +86,7 @@ search:
   path: search.xml
   field: post
   format: html
-  limit: 1000
+  limit: 100
 
 #Sitemap
 #sitemap:
