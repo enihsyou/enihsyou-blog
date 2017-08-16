@@ -14,6 +14,8 @@ categories:
 {% asset_img euphoria-cover-art.png "euphoria" %}
 
 说是纯爱故事，可这等变态扭曲的爱情，实在是难叫人接受。
+探讨生命和爱情价值的纯爱向作品。
+<!--more-->
 3年前听说GalGame吧有12神器，其中一款就叫euphoria，
 好吧其实这不是当初寻找这游戏的起因，真正的原因是 在eden*通关之后，寻找剧情吸引人的催泪向作品，入选果眼的有ef 沙耶之歌 CLANNAD 还有就是这euphoria了。
 重口猎奇纯爱是身居12神器列表的原因之一，G吧也一直拿神器劝退GalGame新手小白们（
