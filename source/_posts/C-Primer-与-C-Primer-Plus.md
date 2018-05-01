@@ -81,5 +81,4 @@ C++ Primer在文中提供了许多最佳实践和易错注意点。可以说前1
 
 自从第一次在学校图书馆看到了一本叫「图解TCP/IP」的图灵系列的书，就爱上了图灵系列。当然还有喜闻乐见的O’Reilly动物书，瞄准了这些总没错。下面提供两本书的PDF下载链接，英文版的，来源是互联网
 
-* [C++ Primer 5th Edition](529_C-Primer-5th-eda8f5537327a5d08f3e825aa5f12ee86f.pdf)
-* [C++ Primer Plus 6th Edition](C-Primer-Plus-6th-Edition63c0eb2f30ed2ace98823173d01d0484.pdf)
+https://github.com/enihsyou/Books
