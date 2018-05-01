@@ -10,6 +10,7 @@ tags:
 
 当然即便经过了从2016年到2018年的不断融合，Kotlin和Spring的结合依然还存在不少需要注意的地方。这篇文章主要列出果子开发中跳的坑，以及摸索(Google)出的解决方案。
 
+<!--more-->
 # Domain类
 
 作为保存数据资源最基础的POJO对象，Kotlin中的`data class`可谓是满足了常见的那些根本不想写的功能。
@@ -40,7 +41,6 @@ data class TokenDomain(
 
 反观Java选手，提供相同功能的Java类，则需要至少3倍的代码量。
 对比之下 可读性下降到无法直视的地步。
-
 ```java
 @Entity
 class TokenDomain {
@@ -84,6 +84,41 @@ class TokenDomain {
     public void setUsed(final boolean used) {
         isUsed = used;
     }
+    
+    @Override
+    public String toString() {
+        return "TokenDomain{token='" + token + '\'' + ", expirationDate=" + expirationDate + ", isUsed=" + isUsed + '}';
+    }
+
+    @Override
+    public boolean equals(final Object object) {
+        if (this == object)
+            return true;
+        if (object == null || getClass() != object.getClass())
+            return false;
+        if (!super.equals(object))
+            return false;
+
+        final TokenDomain that = (TokenDomain) object;
+
+        if (isUsed != that.isUsed)
+            return false;
+        if (token != null ? !token.equals(that.token) : that.token != null)
+            return false;
+        if (expirationDate != null ? !expirationDate.equals(that.expirationDate) : that.expirationDate != null)
+            return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (token != null ? token.hashCode() : 0);
+        result = 31 * result + (expirationDate != null ? expirationDate.hashCode() : 0);
+        result = 31 * result + (isUsed ? 1 : 0);
+        return result;
+    }
 }
 ```
 如果还需要加上`@Nullable` `@NotNull`等null类型标记，更体现Kotlin的优越性。
@@ -104,15 +139,20 @@ Kotlin类支持主从构造器，主构造器可以放在类名后的括号里�
 比如这是一个Controller，需要注入一个Service。可以使用的方式有
 - 设置一个类型为`Service?`的域，然后设置 `@Autowired` 注解
     ```kotlin
-    @Autowired
-    private var accountService: AccountService?
+    class AccountController{
+        @Autowired
+        private var accountService: AccountService?
+    }
     ```
     这样操作以后每次调用都需要判断null
 
 - 使用`lateinit var`声明一个类型为`Service`的域，然后设置`@Autowired` 注解
     ```kotlin
-    @Autowired
-    private lateinit var accountService: AccountService
+    class AccountController{
+        @Autowired
+        private lateinit var accountService: AccountService
+    }
+
     ```
     这样使用至少不用判断null了，可是它还是个`var`在代码高亮的时候可能会不好看
 
@@ -207,7 +247,9 @@ object PasswordUtil {
         api 'xxxxx'
     }
     ```
+
     注意这里使用了一个叫 *java-library* 的插件，有了它才能使用api标记，不然代码提示里的 `apiElements` 并不是你需要的。
+
     ---
     那么如果跟上时代呢
 
