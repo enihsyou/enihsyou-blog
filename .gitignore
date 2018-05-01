@@ -151,3 +151,4 @@ fabric.properties
 !/themes/next/_config.yml
 !/themes/next/languages/zh-Hans.yml
 !/themes/next/source/css/_variables/custom.styl
+/public/
