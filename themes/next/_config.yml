@@ -52,7 +52,6 @@ menu:
   categories: /categories
   tags: /tags
   sitemap: /sitemap.xml
-  wordpress: /wordpress
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -69,8 +68,6 @@ menu_icons:
   tags: tags
   archives: archive
   sitemap: sitemap
-  wordpress: wordpress
-
 
 
 # ---------------------------------------------------------------
@@ -92,7 +89,7 @@ scheme: Muse
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
   host:

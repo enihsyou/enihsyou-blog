@@ -7,6 +7,7 @@ tags:
 categories:
   - 推荐
 date: 2017-02-23 21:42:45
+updated: 2018-07-26 12:36:10
 ---
 
 Windows Vista加入的Aero Glass毛玻璃特效的那种朦胧美感，或许是许多人坚守Windows 7的原因之一。
@@ -32,16 +33,22 @@ Windows Vista加入的Aero Glass毛玻璃特效的那种朦胧美感，或许是
 
 安装完成之后，可以在Theme文件夹下面找到**AeroGlassGUI.exe**，这是一个简易的调节模糊程度的工具，还有一些颜色浓度、透明度、背景图层（Windows 7窗口透明上的条条）等，只不过程序界面有些显示不全？
 
-*   Aero Glass for Win8.1+ v1.4.6 [setup-w8.1-1.4.6-painter.zip](edc75c380ed2513b56c9b3c06ba3b58a.zip)
+<del>
+*   Aero Glass for Win8.1+ v1.4.6 [setup-w8.1-1.4.6-painter.zip]()
 
 适用于Windows 8.1 6.3.9600 以及 最高到10.0.10586 Windows 10。
 
-*   Aero Glass for Win8.1+ v1.5.1 [setup-wrs-1.5.1-painter.zip](805d9f20995764d31476e282bac5b1af.zip)
+*   Aero Glass for Win8.1+ v1.5.1 [setup-wrs-1.5.1-painter.zip]()
 
 只适用于Windows 10 Anniversary Update周年版
 
-*   Aero Glass for Win8.1+ v1.5.2 [Aero Glass for Windows 10 [14393] 1.5.2 x64 RePack by zeUs.H.zip](c72cd1a91f69f124789381d9a33a7265.zip)
+*   Aero Glass for Win8.1+ v1.5.2 [Aero Glass for Windows 10 [14393] 1.5.2 x64 RePack by zeUs.H.zip]()
 
 只适用于Windows 10 RedStone 10.0.14393。
 
-*   Aero Glass for Win8.1+ v1.5.3 [Aero Glass for Windows 10 RS1 1.5.3 x64 RePack by zeUs.H.zip](AB00AB2B8CD4C862493F6A5C3D4514BB17679DD1.zip)
+*   Aero Glass for Win8.1+ v1.5.3 [Aero Glass for Windows 10 RS1 1.5.3 x64 RePack by zeUs.H.zip]()
+</del>
+
+Updated:
+请访问 [官网](http://www.glass8.eu/) 获取最新版
+
