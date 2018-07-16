@@ -1,9 +1,13 @@
 ---
+id: 43
 title: Kotlin 和 Spring 是好朋友
 date: 2018-03-30 13:15:47
 tags:
   - Kotlin
+  - Java
   - Spring Boot
+categories:
+  - 编程
 ---
 
 [Spring Framework](https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0)从5.0开始加入了完整的Kotlin语言支持~使用Kotlin DSL风格的构建语法，能切实感受到Java语言缺失的那份开发的快感。配合上免配置的Spring Boot框架，更是如虎添翼。
