@@ -51,5 +51,4 @@ typings/
 .idea_modules/
 
 /public/
-/themes/next/
-!/themes/next/source/css/_custom/
+/themes/

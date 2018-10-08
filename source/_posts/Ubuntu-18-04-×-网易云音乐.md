@@ -62,7 +62,7 @@ sudo apt install -f
 
 那就用Terminal运行`netease-cloud-music`命令
 
-       netease-cloud-music                
+      netease-cloud-music                
     [0824/153835.432001:ERROR:connection.cc(1963)] Cookie sqlite error 8, errno 0: attempt to write a readonly database, sql: UPDATE cookies SET last_access_utc=? WHERE creation_utc=?
     [0824/153835.432102:ERROR:connection.cc(1963)] Cookie sqlite error 8, errno 0: attempt to write a readonly database, sql: UPDATE cookies SET last_access_utc=? WHERE creation_utc=?
 
