@@ -3,9 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 九条涼果
-subtitle: 果果的闪光堆放处
-description: Kujō Ryōka @enihsyou 编写中>>>
+title: 果果的闪光堆放处
+subtitle: 小果果 榨果果
+description: "@enihsyou 编写中>>>"
+#description: Kujō Ryōka @enihsyou 编写中>>>
 #author: 九条涼果
 author: <ruby>九<rp>(</rp><rt>Ku</rt><rp>)</rp>条<rp>(</rp><rt>jō</rt><rp>)</rp>涼<rp>(</rp><rt>Ryō</rt><rp>)</rp>果<rp>(</rp><rt>ka</rt><rp>)</rp></ruby>
 language: zh-Hans
@@ -31,6 +32,7 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
+auto_spacing: true
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
@@ -65,7 +67,6 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
-#theme: material
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
