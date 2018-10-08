@@ -1,0 +1,155 @@
+favicon:
+  small: /favicon-16x16.png
+  medium: /favicon-32x32.png
+  apple_touch_icon: /apple-touch-icon.png
+  safari_pinned_tab: /safari-pinned-tab.svg
+  android_manifest: /site.webmanifest
+  ms_browserconfig: /browserconfig.xml
+
+keywords: "九条涼果, enihsyou, 果, Shane"
+
+footer:
+  since: 2015
+  icon:
+    name: heart
+    animated: true
+    color: "#D43F57"
+
+  powered:
+    enable: true
+    version: false
+
+  theme:
+    enable: true
+    version: false
+
+  custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://piki.moe"><b>Inazuma Network</b></a>
+
+canonical: true.
+seo: true
+index_with_subtitle: true
+
+menu:
+  home: / || home
+  about: /about/ || user
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  sitemap: /sitemap.xml || sitemap
+
+menu_settings:
+  icons: true
+  badges: false
+
+scheme: Gemini
+
+social:
+  GitHub: https://github.com/enihsyou || github
+  Twitter: https://twitter.com/enihsyou || twitter
+  Zhihu: https://www.zhihu.com/people/enihsyou || blind
+  About.me: https://about.me/enihsyou || street-view
+  Bangumi: https://bgm.tv/user/kacyan || wheelchair-alt
+  Last.fm: https://www.last.fm/user/guoka || lastfm
+  Steam: https://steamcommunity.com/id/enihsyou || steam
+  Email: mailto://haruto@enihsyou.com || envelope-o
+  Telegram: https://telegram.me/enihsyou || telegram
+  QQ: tencent://message/?uin=1131626817&site=enihsyou.com&menu=yes || qq
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: true
+
+github_banner: https://github.com/enihsyou || Follow me on GitHub
+
+avatar:
+  url: /images/avatar.jpg
+  rounded: true
+  opacity: 1
+  rotated: true
+
+save_scroll: true
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enabled: true
+    another_day: true
+  categories: true
+
+codeblock:
+  border_radius:
+  copy_button:
+    enable: true
+    show_result: true
+
+mobile_layout_economy: true
+
+mathjax:
+  enable: false
+  per_page: false
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+baidu_analytics: ca04a67d56ec0d49715125d38e937110
+
+disqus:
+  enable: true
+  shortname: enihsyou
+  count: false
+
+google_site_verification: yrXUY2kJiZr7Ut0nDQYLbJYRKFuzxPc9YBCyryVZwUY
+google_analytics: UA-60435368-1
+
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: true
+
+reading_progress:
+  enable: true
+
+fancybox: true
+
+lazyload: true
+
+pace: true
+pace_theme: pace-theme-minimal
+
+
+vendors:
+  # Internal version: 2.1.3
+  jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
+
+  # Internal version: 2.1.5
+  # See: http://fancyapps.com/fancybox/
+  fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js
+  fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css
+
+  # Internal version: 1.9.7
+  # See: https://github.com/tuupola/jquery_lazyload
+  lazyload: https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
+
+  # Internal version: 1.2.1
+  # See: http://VelocityJS.org
+  velocity: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
+
+  # Internal version: 1.2.1
+  # See: http://VelocityJS.org
+  velocity_ui: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
+
+  # Internal version: 0.7.9
+  # See: https://faisalman.github.io/ua-parser-js/
+  ua_parser: https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.18/ua-parser.min.js
+
+  # Internal version: 4.6.2
+  # See: http://fontawesome.io/
+  fontawesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+
+  # Internal version: 1.0.2
+  # See: https://github.com/HubSpot/pace
+  # Or use direct links below:
+  # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
+  # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
+  pace: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
+  pace_css: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-minimal.min.css

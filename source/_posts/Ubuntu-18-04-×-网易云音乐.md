@@ -2,14 +2,19 @@
 title: Ubuntu 18.04 × 网易云音乐
 date: 2018-08-24 16:00:35
 tags:
-- ubuntu
+  - Ubuntu
+  - 网易云
 id: 46
+categories:
+  - 折腾
 ---
 
 很高兴在[官网](https://music.163.com/#/download)上看到网易云音乐提供Linux的二进制安装包。
 有deepin15和ubuntu16.04两个选项，且都是64位版本的。我是Ubuntu18.04，想想看应该没问题
 
 迫不及待下载安装！
+
+<!--more-->
 
 ## 安装
 下载就不用教了吧。
