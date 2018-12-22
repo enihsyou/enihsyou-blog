@@ -4,13 +4,19 @@ date: 2018-10-08 14:11:03
 tags:
   - macOS
   - RAMDisk
+  - Chrome
 id: 47
 categories:
   - 折腾
+  - 优化
 ---
 
 既然有32GB的内存，那么为何不利用起来呢🤪开个内存盘吧
+
+顺便把傻大粗的 Chrome 缓存移动过去。（比软连接更完美的解决方案）
+
 <!--more-->
+---
 
 果果新入了台2018年款2.6G 32G版的MacBook Pro💻
 
@@ -22,6 +28,8 @@ categories:
 根据调教躺在寝室里的前任开发机的经验，辛苦的作为主力开发机的话，每天将会承受上百GB的写入量，顿时心疼之心悠然而生
 
 毕竟是不可更换硬件设备的MBP呀，还是爱惜点好，那么我们一起来开个RAMDisk吧～
+
+本文包括创建HFS+内存盘、创建APFS内存盘、移动Chrome默认缓存目录、开机自动创建内存盘等内容😉
 
 ## 简单创建内存盘
 
@@ -149,8 +157,10 @@ diskutil partitionDisk $DISK_ID GPT APFS "$DISKNAME" 0
 
 浏览器什么的都是Cache大户，特别是你 Chrome
 
+### 移动 Chrome 默认缓存目录到内存盘
+
 按照以往在Windows上的经验，首先找到缓存文件夹的文字，删除之，再在RAM Disk中创建新的缓存文件夹，
-使用`ln -s`(`mklink /D` on Windows) 把原始位置和内存盘位置连在一起，
+使用`ln -s` (or `mklink /D` on Windows) 把原始位置和内存盘位置连在一起，
 
 网上已经有很多做法示例啦，这里就简单列出几个
 
@@ -201,8 +211,21 @@ defaults read com.google.Chrome
 defaults write com.google.Chrome DiskCacheDir /Volumes/RAM/Cache/Chrome
 ```
 
-然后～Chrome就会自动使用这个目录啦，甚至不需要移动旧的
-而且如果不存在，它直接不创建缓存文件
+然后～ Chrome就会自动使用这个目录啦，甚至不需要移动旧的。
+
+而且如果这个目录不存在，它直接不创建缓存文件
+
+---
+给 FireFox 也移动一下吧～
+
+### 移动 Firefox 默认缓存目录到内存盘
+根据Google出来，[这里](https://ccm.net/faq/40745-firefox-how-to-change-the-location-of-the-temporary-files-folder)的说明
+  把大象放进冰箱只要几步
+  
+1. 在Firefox中打开 [about:config](about:config)
+2. 找到 *browser.cache.disk.parent_directory* 这个键
+3. 修改为想要的目录
+4. 关上冰箱门（重启浏览器）
 
 ## 我想开机就享有速度
 
@@ -215,8 +238,8 @@ defaults write com.google.Chrome DiskCacheDir /Volumes/RAM/Cache/Chrome
 NoNoNo
   我们用Global Agent
 
-可以用Xcode，用LaunchControl等等工具
-  创建一个Plist，放到`/Library/LaunchAgents/local.ramdisk.plist`
+可以用Xcode，用LaunchControl等等工具，
+  创建一个Plist，放到`/Library/LaunchAgents/local.ramdisk.plist`。
   内容大概如下
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
