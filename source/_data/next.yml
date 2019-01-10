@@ -152,4 +152,4 @@ vendors:
   # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
   # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
   pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
-  pace_css: https://cdn.bootcss.com/pace/1.0.2/themes/green/pace-theme-minimal.min.css
+  pace_css: https://cdn.bootcss.com/pace/1.0.2/themes/black/pace-theme-minimal.min.css
