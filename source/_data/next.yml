@@ -119,37 +119,37 @@ pace_theme: pace-theme-minimal
 
 vendors:
   # Internal version: 2.1.3
-  jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
+  jquery: https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
-  fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js
-  fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css
+  fancybox: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
+  fancybox_css: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
-  lazyload: https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
+  lazyload: https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
+  velocity: https://cdn.bootcss.com/velocity/1.2.1/velocity.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity_ui: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
+  velocity_ui: https://cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js
 
   # Internal version: 0.7.9
   # See: https://faisalman.github.io/ua-parser-js/
-  ua_parser: https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.18/ua-parser.min.js
+  ua_parser: https://cdn.bootcss.com/UAParser.js/0.7.19/ua-parser.min.js
 
   # Internal version: 4.6.2
   # See: http://fontawesome.io/
-  fontawesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+  fontawesome: https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
   # Internal version: 1.0.2
   # See: https://github.com/HubSpot/pace
   # Or use direct links below:
   # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
   # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
-  pace: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
-  pace_css: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-minimal.min.css
+  pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
+  pace_css: https://cdn.bootcss.com/pace/1.0.2/themes/green/pace-theme-minimal.min.css
