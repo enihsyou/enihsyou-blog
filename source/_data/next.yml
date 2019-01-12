@@ -25,6 +25,11 @@ footer:
 
   custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://piki.moe"><b>Inazuma Network</b></a>
 
+creative_commons:
+  license: by
+  sidebar: false
+  post   : true
+
 canonical: true.
 seo: true
 index_with_subtitle: true
@@ -67,6 +72,13 @@ avatar:
   opacity: 1
   rotated: true
 
+toc:
+  enable   : true
+  number   : true
+  wrap     : true
+  max_depth: 5
+
+scroll_to_more: false
 save_scroll: true
 
 post_meta:
@@ -78,7 +90,7 @@ post_meta:
   categories: true
 
 codeblock:
-  border_radius:
+  border_radius: 2
   copy_button:
     enable: true
     show_result: true
@@ -86,11 +98,9 @@ codeblock:
 mobile_layout_economy: true
 
 mathjax:
-  enable: false
-  per_page: false
-  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  enable: true
 
-baidu_analytics: ca04a67d56ec0d49715125d38e937110
+#baidu_analytics: ca04a67d56ec0d49715125d38e937110
 
 disqus:
   enable: true
@@ -109,6 +119,16 @@ local_search:
 reading_progress:
   enable: true
 
+motion:
+  enable: true
+  async : true
+  transition:
+    post_block : fadeIn
+    post_header: fadeIn
+    post_body  : fadeIn
+    coll_header: fadeIn
+    sidebar    : slideDownIn
+
 fancybox: true
 
 lazyload: true
@@ -123,8 +143,8 @@ vendors:
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
-  fancybox: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
-  fancybox_css: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
+  fancybox: https://cdn.bootcss.com/fancybox/3.5.6/jquery.fancybox.min.js
+  fancybox_css: https://cdn.bootcss.com/fancybox/3.5.6/jquery.fancybox.min.css
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
@@ -133,9 +153,6 @@ vendors:
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
   velocity: https://cdn.bootcss.com/velocity/1.2.1/velocity.min.js
-
-  # Internal version: 1.2.1
-  # See: http://VelocityJS.org
   velocity_ui: https://cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js
 
   # Internal version: 0.7.9
