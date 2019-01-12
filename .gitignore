@@ -50,6 +50,4 @@ typings/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
-/public/
-/themes/
 public.tar.gz
