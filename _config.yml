@@ -71,6 +71,11 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
+  type      : sftp
+  host      : enihsyou.com
+  user      : enihsyou
+  port      : 22122
+  remotePath: /home/enihsyou/blog
 
 #Feed
 ## hexo-generator-feed
