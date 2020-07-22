@@ -73,9 +73,11 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: sftp
+  type: rsync
   host: enihsyou.com
   user: enihsyou
+  root: /home/enihsyou/blog
+  verbose: true
   remotePath: /home/enihsyou/blog
 
 #Feed
