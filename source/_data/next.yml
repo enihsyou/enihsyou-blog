@@ -13,6 +13,9 @@ cache:
 
 minify: true
 
+custom_file_path:
+  footer: source/_data/footer.njk
+
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
