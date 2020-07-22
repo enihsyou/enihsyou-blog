@@ -155,7 +155,7 @@ Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。
   data-gist-id="1e0be087d316dd74779f9f0b9020bf12"
   data-gist-caption="DefaultKeyBinding.dict"
   data-gist-line="47-83"
-  style="padding: inherit"></code>
+  style="padding: inherit">https://gist.github.com/enihsyou/1e0be087d316dd74779f9f0b9020bf12#file-defaultkeybinding-dict-L47-L83</code>
 
 更详细的说明文档可以参看🍎文档（又来）
 

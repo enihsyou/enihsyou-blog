@@ -180,7 +180,7 @@ reading_progress:
 # ---------------------------------------------------------------
 
 font:
-  enable: true
+  enable: false
   host: https://fonts.loli.net
 
 # ---------------------------------------------------------------
@@ -216,9 +216,9 @@ disqus:
 # ---------------------------------------------------------------
 # Statistics and Analytics
 # ---------------------------------------------------------------
-google_analytics:
-  tracking_id: UA-60435368-1
-  only_pageview: true
+#google_analytics:
+#  tracking_id: UA-60435368-1
+#  only_pageview: true
 #baidu_analytics: ca04a67d56ec0d49715125d38e937110
 
 # ---------------------------------------------------------------
@@ -264,3 +264,8 @@ motion:
 pace:
   enable: true
   theme: minimal
+
+
+vendors:
+  fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css
+  animate_css: //cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css
