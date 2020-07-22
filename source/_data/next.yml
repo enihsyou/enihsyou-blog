@@ -1,3 +1,22 @@
+# ===============================================================
+# Alternate Theme Config configuring the NexT theme
+# See: themes/next/_config.yml
+# ===============================================================
+
+
+# ---------------------------------------------------------------
+# Theme Core Configuration Settings
+# ---------------------------------------------------------------
+
+cache:
+  enable: true
+
+minify: true
+
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
 favicon:
   small: /favicon-16x16.png
   medium: /favicon-32x32.png
@@ -6,18 +25,16 @@ favicon:
   android_manifest: /site.webmanifest
   ms_browserconfig: /browserconfig.xml
 
-keywords: "九条涼果, enihsyou, 果, Shane"
+keywords: "九条涼果, enihsyou"
 
 footer:
   since: 2015
   icon:
-    name: heart
+    name: fa fa-heart
     animated: true
     color: "#D43F57"
 
-  powered:
-    enable: true
-    version: false
+  powered: true
 
   theme:
     enable: true
@@ -28,34 +45,54 @@ footer:
 creative_commons:
   license: by
   sidebar: false
-  post   : true
+  post: true
+  language: deed.zh
+
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
+
+scheme: Gemini
+darkmode: true
 
 canonical: true.
 seo: true
 index_with_subtitle: true
 
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
 menu:
-  home: / || home
-  about: /about/ || user
-  archives: /archives/ || archive
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml || sitemap
+  sitemap: /sitemap.xml || fa fa-sitemap
 
 menu_settings:
   icons: true
   badges: false
 
-scheme: Gemini
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+avatar:
+  url: /images/avatar.jpg
+  rounded: true
+  rotated: true
 
 social:
-  GitHub: https://github.com/enihsyou || github
-  Twitter: https://twitter.com/enihsyou || twitter
-  About.me: https://about.me/enihsyou || street-view
-  Bangumi: https://bgm.tv/user/kacyan || wheelchair-alt
-  Last.fm: https://www.last.fm/user/guoka || lastfm
-  Steam: https://steamcommunity.com/id/enihsyou || steam
-  Email: mailto://haruto@enihsyou.com || envelope-o
-  Telegram: https://telegram.me/enihsyou || telegram
+  GitHub: https://github.com/enihsyou || fab fa-github
+  Twitter: https://twitter.com/enihsyou || fab fa-twitter
+  About.me: https://about.me/enihsyou || fas fa-paperclip
+  Bangumi: https://bgm.tv/user/kacyan || fas fa-grin-squint-tears
+  Last.fm: https://www.last.fm/user/guoka || fab fa-lastfm
+  Steam: https://steamcommunity.com/id/enihsyou || fab fa-steam
+  Email: mailto://haruto@enihsyou.com || fas fa-at
+  Telegram: https://telegram.me/enihsyou || fab fa-telegram
 
 social_icons:
   enable: true
@@ -64,20 +101,24 @@ social_icons:
 
 github_banner: https://github.com/enihsyou || Follow me on GitHub
 
-avatar:
-  url: /images/avatar.jpg
-  rounded: true
-  opacity: 1
-  rotated: true
+# Blog rolls
+links_settings:
+  icon: fa fa-globe
+  title: Links
+  # Available values: block | inline
+  layout: block
 
 toc:
-  enable   : true
-  number   : true
-  wrap     : true
+  enable: true
+  number: true
+  wrap: true
+  expand_all: true
   max_depth: 5
 
-scroll_to_more: false
-save_scroll: true
+# ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+read_more_btn: true
 
 post_meta:
   item_text: true
@@ -87,86 +128,133 @@ post_meta:
     another_day: true
   categories: true
 
-codeblock:
-  border_radius: 2
-  copy_button:
-    enable: true
-    show_result: true
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: false
+
+tag_icon: true
+
+follow_me:
+  Twitter: https://twitter.com/enihsyou || fab fa-twitter
+
+# ---------------------------------------------------------------
+# Custom Page Settings
+# ---------------------------------------------------------------
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
 
 mobile_layout_economy: true
 
-mathjax:
-  enable: true
+codeblock:
+  # Code Highlight theme
+  # All available themes: https://theme-next.js.org/highlight/
+  theme:
+    light: default
+    dark: tomorrow-night
+  prism:
+    light: prism
+    dark: prism-dark
+  # Add copy button on codeblock
+  copy_button:
+    enable: true
+    # Available values: default | flat | mac
+    style: mac
 
-#baidu_analytics: ca04a67d56ec0d49715125d38e937110
+back2top:
+  enable: true
+  # Back to top in sidebar.
+  sidebar: true
+  # Scroll percent label in b2t button.
+  scrollpercent: true
+
+# Reading progress bar
+reading_progress:
+  enable: false
+  # Available values: top | bottom
+  position: top
+  color: "#222222"
+  height: 3px
+
+# ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
+
+google_site_verification: yrXUY2kJiZr7Ut0nDQYLbJYRKFuzxPc9YBCyryVZwUY
+
+# ---------------------------------------------------------------
+# Third Party Plugins & Services Settings
+# ---------------------------------------------------------------
+
+math:
+  per_page: true
+
+pjax: true
+fancybox: true
+lazyload: true
+
+# ---------------------------------------------------------------
+# Comments Settings
+# ---------------------------------------------------------------
 
 disqus:
   enable: true
   shortname: enihsyou
   count: false
 
-google_site_verification: yrXUY2kJiZr7Ut0nDQYLbJYRKFuzxPc9YBCyryVZwUY
-google_analytics: UA-60435368-1
+# ---------------------------------------------------------------
+# Post Widgets & Content Sharing Services
+# ---------------------------------------------------------------
+
+# ---------------------------------------------------------------
+# Statistics and Analytics
+# ---------------------------------------------------------------
+google_analytics:
+  tracking_id: UA-60435368-1
+#baidu_analytics: ca04a67d56ec0d49715125d38e937110
+
+# ---------------------------------------------------------------
+# Search Services
+# ---------------------------------------------------------------
 
 local_search:
-  enable: true
+  enable: false
   trigger: auto
   top_n_per_article: 1
   unescape: true
 
-reading_progress:
-  enable: true
+# ---------------------------------------------------------------
+# Chat Services
+# ---------------------------------------------------------------
+
+# ---------------------------------------------------------------
+# Tags Settings
+# ---------------------------------------------------------------
+
+note:
+  style: modern
+  icons: true
+tabs:
+  transition:
+    tabs: true
+    labels: true
+
+# ---------------------------------------------------------------
+# Animation Settings
+# ---------------------------------------------------------------
 
 motion:
   enable: true
-  async : true
+  async: true
   transition:
-    post_block : fadeIn
-    post_header: fadeIn
-    post_body  : fadeIn
-    coll_header: fadeIn
-    sidebar    : slideDownIn
+    post_block: fadeIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
+    sidebar: slideDownIn
 
-fancybox: true
-
-lazyload: true
-
-pace: true
-pace_theme: pace-theme-minimal
-
-# custom_file_path:
-  # head: source/_custom/head.swig
-
-vendors:
-  # Internal version: 2.1.3
-  jquery: https://cdn.staticfile.org/jquery/2.1.3/jquery.min.js
-
-  # Internal version: 2.1.5
-  # See: http://fancyapps.com/fancybox/
-  fancybox: https://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.min.js
-  fancybox_css: https://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.min.css
-
-  # Internal version: 1.9.7
-  # See: https://github.com/tuupola/jquery_lazyload
-  lazyload: https://cdn.staticfile.org/jquery_lazyload/1.9.7/jquery.lazyload.min.js
-
-  # Internal version: 1.2.1
-  # See: http://VelocityJS.org
-  velocity: https://cdn.staticfile.org/velocity/1.2.1/velocity.min.js
-  velocity_ui: https://cdn.staticfile.org/velocity/1.2.1/velocity.ui.min.js
-
-  # Internal version: 0.7.9
-  # See: https://faisalman.github.io/ua-parser-js/
-  ua_parser: https://cdn.staticfile.org/UAParser.js/0.7.9/ua-parser.min.js
-
-  # Internal version: 4.6.2
-  # See: http://fontawesome.io/
-  fontawesome: https://cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css
-
-  # Internal version: 1.0.2
-  # See: https://github.com/HubSpot/pace
-  # Or use direct links below:
-  # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
-  # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
-  pace: https://cdn.staticfile.org/pace/1.0.2/pace.min.js
-  pace_css: https://cdn.staticfile.org/pace/1.0.2/themes/black/pace-theme-minimal.min.css
+pace:
+  enable: true
+  theme: minimal
