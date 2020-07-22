@@ -629,6 +629,14 @@ hexo-cli@^3.0.0:
     resolve "^1.11.0"
     tildify "^2.0.0"
 
+hexo-deployer-rsync@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/hexo-deployer-rsync/download/hexo-deployer-rsync-1.0.0.tgz#7464bb93078b957ad6653c73f326279025a1d8e2"
+  integrity sha1-dGS7kweLlXrWZTxz8yYnkCWh2OI=
+  dependencies:
+    chalk "^2.4.1"
+    hexo-util "^1.0.0"
+
 hexo-deployer-sftp@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npm.taobao.org/hexo-deployer-sftp/download/hexo-deployer-sftp-0.4.1.tgz#dcedb436c8cfbefdc3d526677de6fec6f9de418f"
@@ -777,7 +785,7 @@ hexo-tag-kbd@^0.0.1:
   resolved "https://registry.npm.taobao.org/hexo-tag-kbd/download/hexo-tag-kbd-0.0.1.tgz#d53e782b1cc741502b6a34e459a63416b6f50e31"
   integrity sha1-1T54KxzHQVArajTkWaY0Frb1DjE=
 
-hexo-util@^1.3.0, hexo-util@^1.4.0, hexo-util@^1.7.0, hexo-util@^1.9.1:
+hexo-util@^1.0.0, hexo-util@^1.3.0, hexo-util@^1.4.0, hexo-util@^1.7.0, hexo-util@^1.9.1:
   version "1.9.1"
   resolved "https://registry.npm.taobao.org/hexo-util/download/hexo-util-1.9.1.tgz#15dc10d0dca474c978cdba9c20e8d0417ac993de"
   integrity sha1-FdwQ0NykdMl4zbqcIOjQQXrJk94=

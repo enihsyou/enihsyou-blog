@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "hexo": "^4.2.1",
-    "hexo-deployer-sftp": "^0.4.1",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^2.2.0",
@@ -22,8 +21,12 @@
     "hexo-renderer-markdown-it": "^4.1.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-ruby-character": "^1.0.6",
-    "hexo-server": "^1.0.0",
     "hexo-tag-kbd": "^0.0.1",
     "hexo-wordcount": "^6.0.1"
+  },
+  "devDependencies": {
+    "hexo-server": "^1.0.0",
+    "hexo-deployer-sftp": "^0.4.1",
+    "hexo-deployer-rsync": "^1.0.0"
   }
 }
