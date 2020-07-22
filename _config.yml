@@ -73,10 +73,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type      : sftp
-  host      : enihsyou.com
-  user      : enihsyou
-  port      : 22122
+  type: sftp
+  host: enihsyou.com
+  user: enihsyou
   remotePath: /home/enihsyou/blog
 
 #Feed
