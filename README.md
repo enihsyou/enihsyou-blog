@@ -8,3 +8,10 @@ git submodule init
 
 git lfs pull
 ```
+
+To deploying, run below
+
+```bash
+hexo generate
+hexo deploy
+```
