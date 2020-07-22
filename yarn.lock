@@ -682,13 +682,6 @@ hexo-generator-index@^1.0.0:
   dependencies:
     hexo-pagination "1.0.0"
 
-hexo-generator-searchdb@^1.0.7:
-  version "1.3.2"
-  resolved "https://registry.npm.taobao.org/hexo-generator-searchdb/download/hexo-generator-searchdb-1.3.2.tgz#8485456d199cc87255246ffcaff8530741b6292c"
-  integrity sha1-hIVFbRmcyHJVJG/8r/hTB0G2KSw=
-  dependencies:
-    nunjucks "^3.2.2"
-
 hexo-generator-sitemap@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/hexo-generator-sitemap/download/hexo-generator-sitemap-2.0.0.tgz#0d4cc5c44785c1ae15c5898e0c5bff5a9e163957"
@@ -732,14 +725,16 @@ hexo-renderer-ejs@^1.0.0:
   dependencies:
     ejs "^2.6.1"
 
-"hexo-renderer-markdown-it@file:plugins/hexo-renderer-markdown-it":
+hexo-renderer-markdown-it@^4.1.0:
   version "4.1.0"
+  resolved "https://registry.npm.taobao.org/hexo-renderer-markdown-it/download/hexo-renderer-markdown-it-4.1.0.tgz#bfac6ad38afb2f21364699089515a33fd6f10c48"
+  integrity sha1-v6xq04r7LyE2RpkIlRWjP9bxDEg=
   dependencies:
-    hexo-util "^2.1.0"
-    markdown-it "^11.0.0"
+    hexo-util "^1.7.0"
+    markdown-it "^10.0.0"
     markdown-it-abbr "^1.0.4"
     markdown-it-cjk-breaks "^1.1.2"
-    markdown-it-container "^3.0.0"
+    markdown-it-container "^2.0.0"
     markdown-it-deflist "^2.0.3"
     markdown-it-emoji "^1.4.0"
     markdown-it-footnote "^3.0.1"
@@ -777,7 +772,12 @@ hexo-server@^1.0.0:
     open "^6.3.0"
     serve-static "^1.14.1"
 
-hexo-util@^1.3.0, hexo-util@^1.4.0, hexo-util@^1.9.1:
+hexo-tag-kbd@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/hexo-tag-kbd/download/hexo-tag-kbd-0.0.1.tgz#d53e782b1cc741502b6a34e459a63416b6f50e31"
+  integrity sha1-1T54KxzHQVArajTkWaY0Frb1DjE=
+
+hexo-util@^1.3.0, hexo-util@^1.4.0, hexo-util@^1.7.0, hexo-util@^1.9.1:
   version "1.9.1"
   resolved "https://registry.npm.taobao.org/hexo-util/download/hexo-util-1.9.1.tgz#15dc10d0dca474c978cdba9c20e8d0417ac993de"
   integrity sha1-FdwQ0NykdMl4zbqcIOjQQXrJk94=
@@ -790,21 +790,6 @@ hexo-util@^1.3.0, hexo-util@^1.4.0, hexo-util@^1.9.1:
     htmlparser2 "^4.0.0"
     prismjs "^1.17.1"
     punycode.js "^2.1.0"
-    strip-indent "^3.0.0"
-    striptags "^3.1.1"
-
-hexo-util@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.taobao.org/hexo-util/download/hexo-util-2.1.0.tgz#2c691a034a05d4ed254696c2e99d7cb686fdd350"
-  integrity sha1-LGkaA0oF1O0lRpbC6Z18tob901A=
-  dependencies:
-    bluebird "^3.5.2"
-    camel-case "^4.0.0"
-    cross-spawn "^7.0.0"
-    deepmerge "^4.2.2"
-    highlight.js "^10.0.0"
-    htmlparser2 "^4.0.0"
-    prismjs "^1.17.1"
     strip-indent "^3.0.0"
     striptags "^3.1.1"
 
@@ -844,11 +829,6 @@ hexo@^4.2.1:
     tildify "^2.0.0"
     titlecase "^1.1.2"
     warehouse "^3.0.1"
-
-highlight.js@^10.0.0:
-  version "10.1.1"
-  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.1.1.tgz#691a2148a8d922bf12e52a294566a0d993b94c57"
-  integrity sha1-aRohSKjZIr8S5SopRWag2ZO5TFc=
 
 highlight.js@^9.13.1:
   version "9.18.1"
@@ -963,10 +943,10 @@ lazy-cache@^1.0.3:
   resolved "https://registry.npm.taobao.org/lazy-cache/download/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
 
-linkify-it@^3.0.1:
-  version "3.0.2"
-  resolved "https://registry.npm.taobao.org/linkify-it/download/linkify-it-3.0.2.tgz#f55eeb8bc1d3ae754049e124ab3bb56d97797fb8"
-  integrity sha1-9V7ri8HTrnVASeEkqzu1bZd5f7g=
+linkify-it@^2.0.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/linkify-it/download/linkify-it-2.2.0.tgz#e3b54697e78bf915c70a38acd78fd09e0058b1cf"
+  integrity sha1-47VGl+eL+RXHCjis14/QngBYsc8=
   dependencies:
     uc.micro "^1.0.1"
 
@@ -999,10 +979,10 @@ markdown-it-cjk-breaks@^1.1.2:
   dependencies:
     eastasianwidth "~0.2.0"
 
-markdown-it-container@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/markdown-it-container/download/markdown-it-container-3.0.0.tgz#1d19b06040a020f9a827577bb7dbf67aa5de9a5b"
-  integrity sha1-HRmwYECgIPmoJ1d7t9v2eqXemls=
+markdown-it-container@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/markdown-it-container/download/markdown-it-container-2.0.0.tgz#0019b43fd02eefece2f1960a2895fba81a404695"
+  integrity sha1-ABm0P9Au7+zi8ZYKKJX7qBpARpU=
 
 markdown-it-deflist@^2.0.3:
   version "2.0.3"
@@ -1039,14 +1019,14 @@ markdown-it-sup@^1.0.0:
   resolved "https://registry.npm.taobao.org/markdown-it-sup/download/markdown-it-sup-1.0.0.tgz#cb9c9ff91a5255ac08f3fd3d63286e15df0a1fc3"
   integrity sha1-y5yf+RpSVawI8/09YyhuFd8KH8M=
 
-markdown-it@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.npm.taobao.org/markdown-it/download/markdown-it-11.0.0.tgz#dbfc30363e43d756ebc52c38586b91b90046b876"
-  integrity sha1-2/wwNj5D11brxSw4WGuRuQBGuHY=
+markdown-it@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.npm.taobao.org/markdown-it/download/markdown-it-10.0.0.tgz#abfc64f141b1722d663402044e43927f1f50a8dc"
+  integrity sha1-q/xk8UGxci1mNAIETkOSfx9QqNw=
   dependencies:
     argparse "^1.0.7"
     entities "~2.0.0"
-    linkify-it "^3.0.1"
+    linkify-it "^2.0.0"
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
@@ -1222,7 +1202,7 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "https://registry.npm.taobao.org/normalize-path/download/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=
 
-nunjucks@^3.0.0, nunjucks@^3.1.3, nunjucks@^3.1.6, nunjucks@^3.2.2:
+nunjucks@^3.0.0, nunjucks@^3.1.3, nunjucks@^3.1.6:
   version "3.2.2"
   resolved "https://registry.npm.taobao.org/nunjucks/download/nunjucks-3.2.2.tgz?cache=0&sync_timestamp=1595219927930&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnunjucks%2Fdownload%2Fnunjucks-3.2.2.tgz#45f915fef0f89fbab38c489dc85025f64859f466"
   integrity sha1-RfkV/vD4n7qzjEidyFAl9khZ9GY=

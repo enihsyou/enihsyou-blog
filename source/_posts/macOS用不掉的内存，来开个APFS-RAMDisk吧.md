@@ -100,7 +100,7 @@ diskutil erasevolume HFS+ 'RAM Disk' `hdiutil attach -nomount ram://8388608`
 然后你就能在Finder里看到自己的内存盘啦
 体验一下速度～
 
-![Blackmagic Disk Speed Test, 3GB file, HFS+ Disk](HFS Speed Test.png)
+![Blackmagic Disk Speed Test, 3GB file, HFS+ Disk](HFS%20Speed%20Test.png)
 
 足够满意了吧
 
@@ -151,7 +151,7 @@ diskutil partitionDisk $DISK_ID GPT APFS "$DISKNAME" 0
 
 再体验一下速度～
 
-![Blackmagic Disk Speed Test, 3GB file, APFS Disk](APFS Speed Test.png)
+![Blackmagic Disk Speed Test, 3GB file, APFS Disk](APFS%20Speed%20Test.png)
 
 
 ## 移动缓存文件夹
