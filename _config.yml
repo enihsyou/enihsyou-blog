@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://enihsyou.com
+url: https://blog.kokomi.me
 root: /
 permalink: :year/:month/:day/:id/
 permalink_defaults:
@@ -69,16 +69,6 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: rsync
-  host: enihsyou.com
-  user: enihsyou
-  root: /home/enihsyou/blog
-  verbose: true
-  remotePath: /home/enihsyou/blog
 
 #Feed
 ## hexo-generator-feed

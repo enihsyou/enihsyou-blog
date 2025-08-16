@@ -43,7 +43,7 @@ footer:
     enable: true
     version: false
 
-  custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://piki.moe"><b>Inazuma Network</b></a>
+  custom_text: Hosted on <b>Cloudflare Pages</b>
 
 creative_commons:
   license: by
@@ -94,7 +94,7 @@ social:
   Bangumi: https://bgm.tv/user/kacyan || fas fa-grin-squint-tears
   Last.fm: https://www.last.fm/user/guoka || fab fa-lastfm
   Steam: https://steamcommunity.com/id/enihsyou || fab fa-steam
-  Email: mailto://haruto@enihsyou.com || fas fa-at
+  Email: mailto://enihsyou@gmail.com || fas fa-at
   Telegram: https://telegram.me/enihsyou || fab fa-telegram
 
 social_icons:
@@ -127,7 +127,7 @@ post_meta:
   item_text: true
   created_at: true
   updated_at:
-    enabled: true
+    enabled: false
     another_day: true
   categories: true
 
@@ -190,7 +190,7 @@ font:
 # SEO Settings
 # ---------------------------------------------------------------
 
-google_site_verification: yrXUY2kJiZr7Ut0nDQYLbJYRKFuzxPc9YBCyryVZwUY
+# google_site_verification: yrXUY2kJiZr7Ut0nDQYLbJYRKFuzxPc9YBCyryVZwUY
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
