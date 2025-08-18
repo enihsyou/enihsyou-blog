@@ -17,7 +17,7 @@ categories:
 在网上找文章的时候，时常见到博主炫酷的主题，超快的加载速度，
 一般在页脚都会注明使用的框架和主题。就比如果现在用的，Hexo框架+NexT主题。
 
-以前的WordPress版本还活着呢，在左边**[旧家](wordpress)**页面里。当做以往的记忆啦(･ω´･ )
+以前的WordPress版本还活着呢，在左边**[旧家](https://enihsyou.wordpress.com/)**页面里。当做以往的记忆啦(･ω´･ )
 
 <!--more-->
 
@@ -131,10 +131,10 @@ social_icons:
 ### 利用公共CDN加速访问
 网页要加载许多脚本，这时候就该利用互联网大腿的公共CDN加快速度。
 这里有几个栗子：
-* [百度静态资源公共库](cdn.code.baidu.com) 百度家的测速文件
-* [七牛云CDN](staticfile.org)
-* [BootCDN](bootcdn.cn) 这里的库文件比较新
-* [Google](developers.google.com/speed/libraries/) 国内当然不能用啦
+* [百度静态资源公共库](https://cdn.code.baidu.com) 百度家的测速文件
+* [七牛云CDN](https://staticfile.org)
+* [BootCDN](https://bootcdn.cn) 这里的库文件比较新
+* [Google](https://developers.google.com/speed/libraries/) 国内当然不能用啦
 
 我随便选择了一些填进去
 ```yaml
