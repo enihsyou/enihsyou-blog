@@ -223,7 +223,7 @@ defaults write com.google.Chrome DiskCacheDir /Volumes/RAM/Cache/Chrome
 根据Google出来，[这里](https://ccm.net/faq/40745-firefox-how-to-change-the-location-of-the-temporary-files-folder)的说明
   把大象放进冰箱只要几步
   
-1. 在Firefox中打开 [about:config](about:config)
+1. 在Firefox中打开 `about:config`
 2. 找到 *browser.cache.disk.parent_directory* 这个键
 3. 修改为想要的目录
 4. 关上冰箱门（重启浏览器）
