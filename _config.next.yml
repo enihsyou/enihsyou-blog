@@ -1,20 +1,37 @@
 # ===============================================================
 # Alternate Theme Config configuring the NexT theme
-# See: themes/next/_config.yml
+# See: https://theme-next.js.org/docs/getting-started/configuration
 # ===============================================================
-
 
 # ---------------------------------------------------------------
 # Theme Core Configuration Settings
+# See: https://theme-next.js.org/docs/theme-settings/
 # ---------------------------------------------------------------
 
+# Allow to cache content generation.
 cache:
   enable: true
 
+# Remove unnecessary files after hexo generate.
 minify: true
 
+# Define custom file paths.
+# Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
   footer: source/_data/footer.njk
+
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
+
+# Schemes
+#scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+scheme: Gemini
+
+# Dark Mode
+darkmode: true
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -28,45 +45,51 @@ favicon:
   android_manifest: /site.webmanifest
   ms_browserconfig: /browserconfig.xml
 
-keywords: "九条涼果, enihsyou"
+# Custom Logo (Warning: Do not support scheme Mist)
+custom_logo: #
 
-footer:
-  since: 2015
-  icon:
-    name: fa fa-heart
-    animated: true
-    color: "#D43F57"
-
-  powered: true
-
-  theme:
-    enable: true
-    version: false
-
-  custom_text: Hosted on <b>Cloudflare Pages</b>
-
+# Creative Commons 4.0 International License.
+# See: https://creativecommons.org/about/cclicenses/
 creative_commons:
+  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
   license: by
+  # Available values: big | small
+  size: small
   sidebar: false
   post: true
-  language: deed.zh
+  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
+  # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
+  language: deed.zh-hans
 
-# ---------------------------------------------------------------
-# Scheme Settings
-# ---------------------------------------------------------------
+# Open graph settings
+# See: https://hexo.io/docs/helpers#open-graph
+# See: https://github.com/hexojs/hexo/blob/master/lib/plugins/helper/open_graph.ts
+open_graph:
+  enable: true
+  options:
+    type: blog
+    #twitter_card: <twitter:card>
+    twitter_id: enihsyou
+    #twitter_site: <twitter:site>
+    #twitter_image: <twitter:image>
+    #google_plus: <g+:profile_link>
+    #fb_admins: <fb:admin_id>
+    #fb_app_id: <fb:app_id>
 
-scheme: Gemini
-darkmode: true
+keywords: "九条涼果, enihsyou"
 
 canonical: true.
 seo: true
 index_with_subtitle: true
 
-
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
 
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.
+# Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
+# External url should start with http:// or https://
 menu:
   home: / || fa fa-home
   about: /about/ || fa fa-user
@@ -74,19 +97,56 @@ menu:
   #schedule: /schedule/ || calendar
   sitemap: /sitemap.xml || fa fa-sitemap
 
+# Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
   badges: false
 
 # ---------------------------------------------------------------
 # Sidebar Settings
+# See: https://theme-next.js.org/docs/theme-settings/sidebar
 # ---------------------------------------------------------------
 
+sidebar:
+  # Sidebar position. Available values: left | right
+  position: left
+
+  # Sidebar width.
+  # Applicable to Muse | Mist and mobile of Pisces | Gemini.
+  width_expanded: 320
+  # Applicable to desktop of Pisces | Gemini.
+  width_dual_column: 240
+
+  # Sidebar display.
+  # Applicable to Muse | Mist and mobile of Pisces | Gemini.
+  # Available values:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically.
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  totally remove sidebar including sidebar toggle.
+  display: post
+
+  # Sidebar padding in pixels.
+  padding: 18
+  # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
+  offset: 12
+
+# Sidebar Avatar
 avatar:
+  # Replace the default image and set the url here.
   url: /images/avatar.jpg
+  # If true, the avatar will be displayed in circle.
   rounded: true
+  # If true, the avatar will be rotated with the cursor.
   rotated: true
 
+# Posts / Categories / Tags in sidebar.
+site_state: true
+
+# Social Links
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   GitHub: https://github.com/enihsyou || fab fa-github
   Twitter: https://twitter.com/enihsyou || fab fa-twitter
@@ -102,8 +162,6 @@ social_icons:
   icons_only: false
   transition: true
 
-github_banner: https://github.com/enihsyou || Follow me on GitHub
-
 # Blog rolls
 links_settings:
   icon: fa fa-globe
@@ -111,18 +169,57 @@ links_settings:
   # Available values: block | inline
   layout: block
 
+# Table of Contents in the Sidebar
+# Front-matter variable (nonsupport wrap expand_all).
 toc:
   enable: true
+  # Automatically add list number to toc.
   number: true
+  # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: true
+  # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: true
+  # Maximum heading depth of generated toc.
   max_depth: 5
 
 # ---------------------------------------------------------------
-# Post Settings
+# Footer Settings
+# See: https://theme-next.js.org/docs/theme-settings/footer
 # ---------------------------------------------------------------
+
+# Show multilingual switcher in footer.
+language_switcher: false
+
+footer:
+  # Specify the year when the site was setup. If not defined, current year will be used.
+  since: 2015
+  # Icon between year and copyright info.
+  icon:
+    # Icon name in Font Awesome. See: https://fontawesome.com/icons
+    name: fa fa-heart
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#D43F57"
+
+  # Powered by Hexo & NexT
+  powered: true
+
+  custom_text: Hosted on <b>Cloudflare Pages</b>
+
+# ---------------------------------------------------------------
+# Post Settings
+# See: https://theme-next.js.org/docs/theme-settings/posts
+# ---------------------------------------------------------------
+
+# Use `description` in front-matter to specify post excerpt.
+excerpt_description: true
+
+# Read more button
+# If true, the read more button will be displayed in excerpt section.
 read_more_btn: true
 
+# Post meta display settings
 post_meta:
   item_text: true
   created_at: true
@@ -131,22 +228,62 @@ post_meta:
     another_day: true
   categories: true
 
+# Post wordcount display settings
+# Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
   separated_meta: true
   item_text_post: true
   item_text_total: false
 
+# Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
+
+# Donate (Sponsor) settings
+# Front-matter variable (nonsupport animation).
+reward_settings:
+  # If true, a donate button will be displayed in every article by default.
+  enable: false
+  animation: false
+
+# Post edit
+# Easily browse and edit blog source code online.
+post_edit:
+  enable: true
+  url: https://github.com/enihsyou/enihsyou-blog/tree/main/source/
+
+# Show previous post and next post in post footer if exists
+# Available values: left | right | false
+post_navigation: left
 
 # ---------------------------------------------------------------
 # Custom Page Settings
+# See: https://theme-next.js.org/docs/theme-settings/custom-pages
 # ---------------------------------------------------------------
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
+# See: https://theme-next.js.org/docs/theme-settings/miscellaneous
 # ---------------------------------------------------------------
 
+# Preload styles and preconnect CDN for fonts and plugins.
+# For more information: https://www.w3.org/TR/resource-hints/#preconnect
+preconnect: true
+
+# Set the text alignment in posts / pages.
+text_align:
+  # Available values: start | end | left | right | center | justify | justify-all | match-parent
+  desktop: justify
+  mobile: justify
+
+# Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: true
+
+# Override browsers' default behavior.
+body_scrollbar:
+  # Place the scrollbar over the content.
+  overlay: false
+  # Reserving space for the scrollbar gutter even if the content is not overflowing.
+  stable: false
 
 codeblock:
   # Code Highlight theme
@@ -154,14 +291,13 @@ codeblock:
   theme:
     light: github
     dark: github-dark
-  prism:
-    light: prism
-    dark: prism-dark
   # Add copy button on codeblock
   copy_button:
     enable: true
     # Available values: default | flat | mac
     style: mac
+  # Display language name
+  language: true
 
 back2top:
   enable: true
@@ -178,8 +314,21 @@ reading_progress:
   color: "#222222"
   height: 3px
 
+# `Follow me on GitHub` banner in the top-right corner.
+github_banner:
+  enable: false
+  permalink: https://github.com/enihsyou
+
 # ---------------------------------------------------------------
 # Font Settings
+# ---------------------------------------------------------------
+# Find fonts on Google Fonts (https://fonts.google.com)
+# All fonts set here will have the following styles:
+#   light | light italic | normal | normal italic | bold | bold italic
+# Be aware that setting too much fonts will cause site running slowly
+# ---------------------------------------------------------------
+# Web Safe fonts are recommended for `global` (and `title`):
+# Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 
 font:
@@ -188,37 +337,169 @@ font:
 
 # ---------------------------------------------------------------
 # SEO Settings
+# See: https://theme-next.js.org/docs/theme-settings/seo
 # ---------------------------------------------------------------
 
 # google_site_verification: yrXUY2kJiZr7Ut0nDQYLbJYRKFuzxPc9YBCyryVZwUY
 
 # ---------------------------------------------------------------
+# Tags Settings
+# See: https://theme-next.js.org/docs/tag-plugins/
+# ---------------------------------------------------------------
+
+# Note tag (bootstrap callout)
+note:
+  # Note tag style values:
+  #  - simple    bootstrap callout old alert style. Default.
+  #  - modern    bootstrap callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: modern
+  icons: true
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+
+# Tabs tag
+tabs:
+  # Make the nav bar of tabs with long content stick to the top.
+  sticky: false
+  transition:
+    tabs: true
+    labels: true
+
+# ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
+# See: https://theme-next.js.org/docs/third-party-services/
+# More plugins: https://github.com/next-theme/awesome-next
+# ---------------------------------------------------------------
+
+# ---------------------------------------------------------------
+# Math Formulas Render Support
+# See: https://theme-next.js.org/docs/third-party-services/math-equations
+# Warning: Please install / uninstall the relevant renderer according to the documentation.
+# Server-side plugin: https://github.com/next-theme/hexo-filter-mathjax
 # ---------------------------------------------------------------
 
 math:
-  per_page: true
+  # Default (false) will load mathjax / katex script on demand.
+  # That is it only render those page which has `mathjax: true` in front-matter.
+  # If you set it to true, it will load mathjax / katex script EVERY PAGE.
+  every_page: false
 
+# ---------------------------------------------------------------
+# External Libraries
+# See: https://theme-next.js.org/docs/third-party-services/external-libraries
+# ---------------------------------------------------------------
+
+# Easily enable fast Ajax navigation on your website.
+# For more information: https://github.com/next-theme/pjax
 pjax: true
-fancybox: true
+
+# FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
+# For more information: https://fancyapps.com/fancybox/
+fancybox: false
+
+# Medium Zoom is a JavaScript library for zooming images like Medium.
+# Warning: Do not enable both `fancybox` and `mediumzoom`.
+# For more information: https://medium-zoom.francoischalifour.com
+mediumzoom: false
+
+# Vanilla JavaScript plugin for lazyloading images.
+# For more information: https://apoorv.pro/lozad.js/demo/
 lazyload: true
+
+# Automatically insert whitespace between CJK and half-width characters.
+# For more information: https://github.com/vinta/pangu.js
+# Server-side plugin: https://github.com/next-theme/hexo-pangu
+pangu: false
+
+# Prefetch links based on what is in the user's viewport.
+# For more information: https://getquick.link
+# Front-matter variable (nonsupport home archive).
+quicklink:
+  enable: true
+
+  # Home page and archive page can be controlled through home and archive options below.
+  # This configuration item is independent of `enable`.
+  home: true
+  archive: false
+
+  # Default (true) will initialize quicklink after the load event fires.
+  delay: true
+  # Custom a time in milliseconds by which the browser must execute prefetching.
+  timeout: 3000
+  # Default (true) will attempt to use the fetch() API if supported (rather than link[rel=prefetch]).
+  priority: true
+
+# ---------------------------------------------------------------
+# Animation Settings
+# ---------------------------------------------------------------
+
+# Use Animate.css to animate everything.
+# For more information: https://animate.style
+motion:
+  enable: true
+  async: true
+  duration: 200
+  transition:
+    # All available transition variants: https://theme-next.js.org/animate/
+    menu_item: fadeInDown
+    post_block: fadeIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
+    # Only for Pisces | Gemini.
+    sidebar: slideDownIn
+
+# Progress bar in the top during page loading.
+# For more information: https://github.com/CodeByZach/pace
+pace:
+  enable: true
+  # All available colors:
+  # black | blue | green | orange | pink | purple | red | silver | white | yellow
+  color: white
+  # All available themes:
+  # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
+  # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
+  theme: minimal
 
 # ---------------------------------------------------------------
 # Comments Settings
+# See: https://theme-next.js.org/docs/third-party-services/comments
 # ---------------------------------------------------------------
 
+# Multiple Comment System Support
+comments:
+  # Available values: tabs | buttons
+  style: tabs
+  # Choose a comment system to be displayed by default.
+  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
+  active:
+  # Setting `true` means remembering the comment system selected by the visitor.
+  storage: true
+  # Lazyload all comment systems.
+  lazyload: true
+  # Modify texts or order for any naves, here are some examples.
+  nav:
+    #disqus:
+    #  text: Load Disqus
+    #  order: -1
+    #gitalk:
+    #  order: -2
+
+# Disqus
+# For more information: https://disqus.com
 disqus:
   enable: true
   shortname: enihsyou
   count: false
 
 # ---------------------------------------------------------------
-# Post Widgets & Content Sharing Services
+# Statistics and Analytics
+# See: https://theme-next.js.org/docs/third-party-services/statistics-and-analytics
 # ---------------------------------------------------------------
 
-# ---------------------------------------------------------------
-# Statistics and Analytics
-# ---------------------------------------------------------------
 #google_analytics:
 #  tracking_id: UA-60435368-1
 #  only_pageview: true
@@ -226,49 +507,41 @@ disqus:
 
 # ---------------------------------------------------------------
 # Search Services
+# See: https://theme-next.js.org/docs/third-party-services/search-services
 # ---------------------------------------------------------------
 
+# Local Search
+# Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
   enable: false
-  trigger: auto
+  # Show top n results per article, show all results by setting to -1
   top_n_per_article: 1
+  # Unescape html strings to the readable one.
   unescape: true
+  # Preload the search data when the page loads.
+  preload: false
 
 # ---------------------------------------------------------------
 # Chat Services
+# See: https://theme-next.js.org/docs/third-party-services/chat-services
 # ---------------------------------------------------------------
 
 # ---------------------------------------------------------------
-# Tags Settings
+# CDN Settings
+# See: https://theme-next.js.org/docs/advanced-settings/vendors
 # ---------------------------------------------------------------
-
-note:
-  style: modern
-  icons: true
-tabs:
-  transition:
-    tabs: true
-    labels: true
-
-# ---------------------------------------------------------------
-# Animation Settings
-# ---------------------------------------------------------------
-
-motion:
-  enable: true
-  async: true
-  transition:
-    post_block: fadeIn
-    post_header: fadeInDown
-    post_body: fadeInDown
-    coll_header: fadeInLeft
-    sidebar: slideDownIn
-
-pace:
-  enable: true
-  theme: minimal
-
 
 vendors:
-  fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css
-  animate_css: //cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css
+  # The CDN provider of NexT internal scripts.
+  # Available values: local | jsdelivr | unpkg | cdnjs | custom
+  # Warning: If you are using the latest master branch of NexT, please set `internal: local`
+  internal: jsdelivr
+  # The default CDN provider of third-party plugins.
+  # Available values: local | jsdelivr | unpkg | cdnjs | custom
+  # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
+  plugins: jsdelivr
+  # Custom CDN URL
+  # For example:
+  # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
+  # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
+  custom_cdn_url:
