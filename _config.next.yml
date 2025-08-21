@@ -556,8 +556,3 @@ vendors:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
   custom_cdn_url:
-
-  # use svg instead of font.
-  # this section only patch 'next_vendors' part in hexo-theme-next,
-  # other icon js files are decleared in source/_data/head.njk
-  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/js/fontawesome.min.js
