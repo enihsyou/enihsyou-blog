@@ -20,6 +20,7 @@ minify: true
 custom_file_path:
   head: source/_data/head.njk
   footer: source/_data/footer.njk
+  style: source/_data/styles.styl
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -452,7 +453,7 @@ quicklink:
 motion:
   enable: true
   async: true
-  duration: 200
+  duration: 120
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
     menu_item: fadeInDown
@@ -466,7 +467,7 @@ motion:
 # Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace
 pace:
-  enable: true
+  enable: false
   # All available colors:
   # black | blue | green | orange | pink | purple | red | silver | white | yellow
   color: white
