@@ -1,5 +1,5 @@
 ---
-title: すぴぱら – Alice the magical conductor. STORY #01 – Spring Has Come ! 攻略完成
+title: "すぴぱら – Alice the magical conductor. STORY #01 – Spring Has Come ! 攻略完成"
 id: 3
 tags:
   - minori
