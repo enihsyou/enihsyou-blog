@@ -1,4 +1,8 @@
-// Disqus 把 div 换掉之后没保留边距
-#layout > #thread__container {
-  padding: 2rem;
+// 在夜间模式的浏览器中会 Disqus 选择到 color-scheme: dark，
+// 这个模式下它的 iframe 背景色和网页的背景色不一致，大概在 #121212
+// 这段强制让它采用透明背景，需要结合 Disqus 后台设置 Color Schema 为 Auto 
+// 才能让输入框和文字的颜色也匹配。
+// 不过还有个问题是中途切换色彩主题得刷新页面才生效，问题不大。
+#disqus_thread {
+  color-scheme: auto;
 }
