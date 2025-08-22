@@ -1,6 +1,6 @@
 ---
 title: Terminal爱不释手
-id: 24
+id: loving-the-terminal-msys2
 tags:
   - 终端
   - 编译

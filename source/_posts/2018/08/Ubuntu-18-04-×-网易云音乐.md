@@ -4,7 +4,7 @@ date: 2018-08-24 16:00:35
 tags:
   - Ubuntu
   - 网易云
-id: 46
+id: ubuntu-18-04-with-netease-cloud-music
 categories:
   - 折腾
 ---

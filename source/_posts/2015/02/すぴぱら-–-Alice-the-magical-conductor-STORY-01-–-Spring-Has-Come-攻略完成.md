@@ -1,6 +1,6 @@
 ---
 title: "すぴぱら – Alice the magical conductor. STORY #01 – Spring Has Come ! 攻略完成"
-id: 3
+id: supipara-chapter-1-spring-has-come
 tags:
   - minori
 categories:

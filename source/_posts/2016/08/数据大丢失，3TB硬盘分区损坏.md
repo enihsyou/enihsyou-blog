@@ -1,6 +1,6 @@
 ---
 title: 数据大丢失，3TB硬盘分区损坏
-id: 18
+id: data-loss-3tb-hdd-partition-corruption
 tags:
   - 硬盘
   - 数据丢失

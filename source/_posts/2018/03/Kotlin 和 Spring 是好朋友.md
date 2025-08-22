@@ -1,5 +1,5 @@
 ---
-id: 43
+id: kotlin-and-spring-are-good-friends
 title: Kotlin 和 Spring 是好朋友
 date: 2018-03-30 13:15:47
 tags:

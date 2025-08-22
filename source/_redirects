@@ -1,0 +1,54 @@
+# Cloudflare Pages Redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+# vim: set syntax=plaintext tabstop=4 noexpandtab
+# 把旧的 :year/:month/:day/:id/ 格式的文章链接
+# 定向至 posts/:id/ 新格式，先采用 302 定向，验证后再改为 301 永久定向
+
+/2015/02/22/1/*		/posts/new-arrival/:splat
+/2015/02/22/2/*		/posts/sakura-sakimashita/:splat
+/2015/02/27/3/*		/posts/supipara-chapter-1-spring-has-come/:splat
+/2015/03/09/4/*		/posts/turning-18/:splat
+/2015/04/05/5/*		/posts/valuable-daily-use-software-2015/:splat
+/2015/06/10/6/*		/posts/kurano-kunchi-no-futago-jijou/:splat
+/2015/06/18/7/*		/posts/ever17-the-out-of-infinity/:splat
+/2015/06/30/8/*		/posts/first-checkpoint/:splat
+/2015/07/31/9/*		/posts/white-album-2/:splat
+/2015/09/15/10/*	/posts/great-wall-z2890-4k-monitor/:splat
+/2015/10/25/11/*	/posts/natsuzora-no-perseus/:splat
+/2016/01/03/12/*	/posts/the-three-body-problem-by-liucixin/:splat
+/2016/01/03/13/*	/posts/shitsurakuen-by-watanabe-junichi/:splat
+/2016/01/06/14/*	/posts/life-by-luyao/:splat
+/2016/06/01/15/*	/posts/python-sorting-algorithms-part-1/:splat
+/2016/06/01/16/*	/posts/python-sorting-algorithms-part-2/:splat
+/2016/07/13/17/*	/posts/python-sorting-algorithms-part-3/:splat
+/2016/08/28/18/*	/posts/data-loss-3tb-hdd-partition-corruption/:splat
+/2016/10/09/19/*	/posts/website-migration-wordpress/:splat
+/2016/10/09/20/*	/posts/beijing-trip-2016/:splat
+/2016/11/17/21/*	/posts/painful-os-reinstallation/:splat
+/2016/12/25/22/*	/posts/enabling-https/:splat
+/2017/01/23/23/*	/posts/adding-more-social-icons/:splat
+/2017/01/23/24/*	/posts/loving-the-terminal-msys2/:splat
+/2017/02/23/25/*	/posts/windows-with-aero-glass-is-beautiful/:splat
+/2017/02/25/26/*	/posts/guoguo-new-computer-intel-7700k/:splat
+/2017/03/09/27/*	/posts/turning-20/:splat
+/2017/03/24/28/*	/posts/shiniyuku-kimi-yakata-ni-mebuku-zouo/:splat
+/2017/04/13/29/*	/posts/cpp-primer-and-cpp-primer-plus/:splat
+/2017/05/18/30/*	/posts/embracing-hexo-framework/:splat
+/2017/06/11/31/*	/posts/common-punctuation-marks/:splat
+/2017/06/15/32/*	/posts/kokoro-by-natsume-soseki/:splat
+/2017/06/28/33/*	/posts/shayou-by-dazai-osamu/:splat
+/2017/06/30/34/*	/posts/important-new-checkpoint/:splat
+/2017/07/16/35/*	/posts/inochi-no-spare/:splat
+/2017/07/18/36/*	/posts/euphoria/:splat
+/2017/07/23/37/*	/posts/subarashiki-hibi-furenzoku-sonzai/:splat
+/2017/07/30/38/*	/posts/dekinai-watashi-ga-kurikaesu/:splat
+/2017/07/31/40/*	/posts/suicide-plan-2017/:splat
+/2017/08/04/41/*	/posts/senren-banka/:splat
+/2017/08/04/42/*	/posts/narcissu/:splat
+/2018/03/30/43/*	/posts/kotlin-and-spring-are-good-friends/:splat
+/2018/05/09/44/*	/posts/two-methods-of-thread-sleep/:splat
+/2018/08/18/45/*	/posts/sequential-assignment-for-rows-with-multi-column-duplicates/:splat
+/2018/08/24/46/*	/posts/ubuntu-18-04-with-netease-cloud-music/:splat
+/2018/10/08/47/*	/posts/create-apfs-ramdisk-with-unused-macos-memory/:splat
+/2019/02/04/48/*	/posts/the-persistent-problem-of-macos-ramdisk-backup/:splat
+/2020/07/22/49/*	/posts/emacs-shortcuts-on-macos/:splat

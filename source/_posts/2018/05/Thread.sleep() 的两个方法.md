@@ -5,7 +5,7 @@ tags:
     - Java
 categories:
   - 编程
-id: 44
+id: two-methods-of-thread-sleep
 ---
 
 ## 线程休眠的多种方法

@@ -1,6 +1,6 @@
 ---
 title: 用Python来写各种各样的排序算法 (Part.3)
-id: 17
+id: python-sorting-algorithms-part-3
 tags:
   - Python
   - 算法

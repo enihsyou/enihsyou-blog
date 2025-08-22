@@ -1,7 +1,7 @@
 ---
 title: macOS上的Emacs快捷键
 date: 2020-07-22 11:05:12
-id: 49
+id: emacs-shortcuts-on-macos
 tags:
   - macOS
 categories:

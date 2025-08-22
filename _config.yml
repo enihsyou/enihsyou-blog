@@ -17,7 +17,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://blog.kokomi.me
 root: /
-permalink: :year/:month/:day/:id/
+permalink: posts/:id/
 permalink_defaults:
 pretty_urls:
   trailing_index: true
@@ -30,7 +30,8 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+include:
+  - _redirects
 
 # Writing
 new_post_name: :year/:month/:title.md # File name of new posts
