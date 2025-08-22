@@ -1,6 +1,6 @@
 ---
 title: C++ Primer 与 C++ Primer Plus
-id: 29
+id: cpp-primer-and-cpp-primer-plus
 tags:
   - 书籍
   - C++语言

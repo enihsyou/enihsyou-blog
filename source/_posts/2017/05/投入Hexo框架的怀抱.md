@@ -1,6 +1,6 @@
 ---
 title: 投入Hexo框架的怀抱(･ω´･ )
-id: 30
+id: embracing-hexo-framework
 date: 2017-05-18 19:40:42
 tags: 
   - 网站

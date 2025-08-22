@@ -1,7 +1,7 @@
 ---
 title: macOS内存盘备份老大难问题
 date: 2019-02-04 02:53:16
-id: 48
+id: the-persistent-problem-of-macos-ramdisk-backup
 tags:
   - macOS
   - RAMDisk

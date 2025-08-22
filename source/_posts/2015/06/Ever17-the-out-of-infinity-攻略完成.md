@@ -1,6 +1,6 @@
 ---
 title: Ever17 -the out of infinity- 攻略完成
-id: 7
+id: ever17-the-out-of-infinity
 categories:
   - GalGame
 tags:

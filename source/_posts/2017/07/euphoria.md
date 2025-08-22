@@ -1,7 +1,7 @@
 ---
 title: euphoria
 date: 2017-07-18 16:36:13
-id: 36
+id: euphoria
 tags:
   - Guro
   - Hentai

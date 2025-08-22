@@ -1,6 +1,6 @@
 ---
 title: 4K显示器 长城(Great Wall) Z2890 购入
-id: 10
+id: great-wall-z2890-4k-monitor
 categories:
   - 开箱
 tags:

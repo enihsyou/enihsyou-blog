@@ -1,6 +1,6 @@
 ---
 title: 还是有Aero Glass的Windows漂亮●▽●
-id: 25
+id: windows-with-aero-glass-is-beautiful
 tags:
   - Aero
   - Windows

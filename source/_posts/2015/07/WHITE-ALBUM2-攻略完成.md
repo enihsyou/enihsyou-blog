@@ -1,6 +1,6 @@
 ---
 title: WHITE ALBUM2 攻略完成
-id: 9
+id: white-album-2
 tags:
   - AQUAPLUS
   - Leaf
