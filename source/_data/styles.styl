@@ -12,3 +12,22 @@
 .links-of-blogroll-item a {
   border-bottom: 0;
 }
+
+// footer.njk 里加的公安备案图标
+#gongan-beian-icon {
+  display: inline-block;
+  margin: 0 0.5em;
+  vertical-align: text-bottom;
+}
+
+// 此 SVG 图标颜色支持在夜间模式下反色显示
+@media (prefers-color-scheme: dark) {
+  .dark-mode-invert-svg {
+    filter: invert(1);
+  }
+}
+@media (prefers-color-scheme: light) {
+  .light-mode-invert-svg {
+    filter: invert(1);
+  }
+}
