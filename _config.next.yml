@@ -172,6 +172,12 @@ links_settings:
 
 links:
   ? >
+    <img alt="Written By a Human Not By AI Badge" width="120"
+      src="/images/Written-By-a-Human-Not-By-AI-Badge.svg" 
+      class="light-mode-invert-svg">
+  : https://notbyai.fyi
+  
+  ? >
     <img alt="开往-友链接力" width="120" 
       src="https://www.travellings.cn/assets/logo.svg"
       class="light-mode-invert-svg">
@@ -187,10 +193,13 @@ links:
   : https://travel.moe/go.html
 
   ? >
-    <img alt="Written By a Human Not By AI Badge" width="120"
-      src="/images/Written-By-a-Human-Not-By-AI-Badge.svg" 
-      class="light-mode-invert-svg">
-  : https://notbyai.fyi
+    <picture>
+    <source media="(prefers-color-scheme: dark)"
+        srcset="https://uptime.kokomi.me/api/badge/2/uptime?color=000000&labelColor=282726&label=当下&suffix=%25+Up" >
+    <img alt="心海网络的当下状态" width="120"
+        src="https://uptime.kokomi.me/api/badge/2/uptime?color=FFFFFF&labelColor=D7D8D9&label=当下&suffix=%25+Up">
+    </picture>
+  : https://uptime.kokomi.me/status/default
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
