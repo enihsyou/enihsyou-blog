@@ -1,0 +1,9 @@
+# see https://theme-next.js.org/docs/theme-settings/internationalization#Override-Default-Translations
+# to learn how to configure.
+
+zh-CN:
+  menu:
+    boradcast-channel: 动态频道
+en:
+  menu:
+    boradcast-channel: Broadcast Channel
