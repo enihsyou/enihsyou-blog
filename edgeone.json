@@ -1,0 +1,244 @@
+{
+    "redirects": [
+        {
+            "source": "/2015/02/22/1/",
+            "destination": "/posts/new-arrival/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/02/22/2/",
+            "destination": "/posts/sakura-sakimashita/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/02/27/3/",
+            "destination": "/posts/supipara-chapter-1-spring-has-come/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/03/09/4/",
+            "destination": "/posts/turning-18/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/04/05/5/",
+            "destination": "/posts/valuable-daily-use-software-2015/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/06/10/6/",
+            "destination": "/posts/kurano-kunchi-no-futago-jijou/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/06/18/7/",
+            "destination": "/posts/ever17-the-out-of-infinity/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/06/30/8/",
+            "destination": "/posts/first-checkpoint/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/07/31/9/",
+            "destination": "/posts/white-album-2/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/09/15/10/",
+            "destination": "/posts/great-wall-z2890-4k-monitor/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2015/10/25/11/",
+            "destination": "/posts/natsuzora-no-perseus/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/01/03/12/",
+            "destination": "/posts/the-three-body-problem-by-liucixin/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/01/03/13/",
+            "destination": "/posts/shitsurakuen-by-watanabe-junichi/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/01/06/14/",
+            "destination": "/posts/life-by-luyao/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/06/01/15/",
+            "destination": "/posts/python-sorting-algorithms-part-1/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/06/01/16/",
+            "destination": "/posts/python-sorting-algorithms-part-2/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/07/13/17/",
+            "destination": "/posts/python-sorting-algorithms-part-3/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/08/28/18/",
+            "destination": "/posts/data-loss-3tb-hdd-partition-corruption/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/10/09/19/",
+            "destination": "/posts/website-migration-wordpress/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/10/09/20/",
+            "destination": "/posts/beijing-trip-2016/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/11/17/21/",
+            "destination": "/posts/painful-os-reinstallation/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2016/12/25/22/",
+            "destination": "/posts/enabling-https/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/01/23/23/",
+            "destination": "/posts/adding-more-social-icons/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/01/23/24/",
+            "destination": "/posts/loving-the-terminal-msys2/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/02/23/25/",
+            "destination": "/posts/windows-with-aero-glass-is-beautiful/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/02/25/26/",
+            "destination": "/posts/guoguo-new-computer-intel-7700k/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/03/09/27/",
+            "destination": "/posts/turning-20/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/03/24/28/",
+            "destination": "/posts/shiniyuku-kimi-yakata-ni-mebuku-zouo/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/04/13/29/",
+            "destination": "/posts/cpp-primer-and-cpp-primer-plus/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/05/18/30/",
+            "destination": "/posts/embracing-hexo-framework/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/06/11/31/",
+            "destination": "/posts/common-punctuation-marks/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/06/15/32/",
+            "destination": "/posts/kokoro-by-natsume-soseki/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/06/28/33/",
+            "destination": "/posts/shayou-by-dazai-osamu/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/06/30/34/",
+            "destination": "/posts/important-new-checkpoint/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/07/16/35/",
+            "destination": "/posts/inochi-no-spare/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/07/18/36/",
+            "destination": "/posts/euphoria/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/07/23/37/",
+            "destination": "/posts/subarashiki-hibi-furenzoku-sonzai/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/07/30/38/",
+            "destination": "/posts/dekinai-watashi-ga-kurikaesu/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/07/31/40/",
+            "destination": "/posts/suicide-plan-2017/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/08/04/41/",
+            "destination": "/posts/senren-banka/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2017/08/04/42/",
+            "destination": "/posts/narcissu/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2018/03/30/43/",
+            "destination": "/posts/kotlin-and-spring-are-good-friends/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2018/05/09/44/",
+            "destination": "/posts/two-methods-of-thread-sleep/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2018/08/18/45/",
+            "destination": "/posts/sequential-assignment-for-rows-with-multi-column-duplicates/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2018/08/24/46/",
+            "destination": "/posts/ubuntu-18-04-with-netease-cloud-music/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2018/10/08/47/",
+            "destination": "/posts/create-apfs-ramdisk-with-unused-macos-memory/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2019/02/04/48/",
+            "destination": "/posts/the-persistent-problem-of-macos-ramdisk-backup/",
+            "statusCode": 302
+        },
+        {
+            "source": "/2020/07/22/49/",
+            "destination": "/posts/emacs-shortcuts-on-macos/",
+            "statusCode": 302
+        }
+    ]
+}
