@@ -3,57 +3,57 @@
         {
             "source": "/2015/02/22/1/",
             "destination": "/posts/new-arrival/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/02/22/2/",
             "destination": "/posts/sakura-sakimashita/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/02/27/3/",
             "destination": "/posts/supipara-chapter-1-spring-has-come/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/03/09/4/",
             "destination": "/posts/turning-18/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/04/05/5/",
             "destination": "/posts/valuable-daily-use-software-2015/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/06/10/6/",
             "destination": "/posts/kurano-kunchi-no-futago-jijou/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/06/18/7/",
             "destination": "/posts/ever17-the-out-of-infinity/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/06/30/8/",
             "destination": "/posts/first-checkpoint/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/07/31/9/",
             "destination": "/posts/white-album-2/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/09/15/10/",
             "destination": "/posts/great-wall-z2890-4k-monitor/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2015/10/25/11/",
             "destination": "/posts/natsuzora-no-perseus/",
-            "statusCode": 302
+            "statusCode": 301
         },
         {
             "source": "/2016/01/03/12/",
@@ -69,89 +69,73 @@
             "source": "/2016/01/06/14/",
             "destination": "/posts/life-by-luyao/",
             "statusCode": 302
-        },
-        {
-            "source": "/2016/06/01/15/",
-            "destination": "/posts/python-sorting-algorithms-part-1/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2016/06/01/16/",
-            "destination": "/posts/python-sorting-algorithms-part-2/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2016/07/13/17/",
-            "destination": "/posts/python-sorting-algorithms-part-3/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2016/08/28/18/",
-            "destination": "/posts/data-loss-3tb-hdd-partition-corruption/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2016/10/09/19/",
-            "destination": "/posts/website-migration-wordpress/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2016/10/09/20/",
-            "destination": "/posts/beijing-trip-2016/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2016/11/17/21/",
-            "destination": "/posts/painful-os-reinstallation/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2016/12/25/22/",
-            "destination": "/posts/enabling-https/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/01/23/23/",
-            "destination": "/posts/adding-more-social-icons/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/01/23/24/",
-            "destination": "/posts/loving-the-terminal-msys2/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/02/23/25/",
-            "destination": "/posts/windows-with-aero-glass-is-beautiful/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/02/25/26/",
-            "destination": "/posts/guoguo-new-computer-intel-7700k/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/03/09/27/",
-            "destination": "/posts/turning-20/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/03/24/28/",
-            "destination": "/posts/shiniyuku-kimi-yakata-ni-mebuku-zouo/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/04/13/29/",
-            "destination": "/posts/cpp-primer-and-cpp-primer-plus/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2017/05/18/30/",
-            "destination": "/posts/embracing-hexo-framework/",
-            "statusCode": 302
         }
     ],
     "rewrites": [
+        {
+            "source": "/2016/06/01/15/*",
+            "destination": "/posts/python-sorting-algorithms-part-1/:splat"
+        },
+        {
+            "source": "/2016/06/01/16/*",
+            "destination": "/posts/python-sorting-algorithms-part-2/:splat"
+        },
+        {
+            "source": "/2016/07/13/17/*",
+            "destination": "/posts/python-sorting-algorithms-part-3/:splat"
+        },
+        {
+            "source": "/2016/08/28/18/*",
+            "destination": "/posts/data-loss-3tb-hdd-partition-corruption/:splat"
+        },
+        {
+            "source": "/2016/10/09/19/*",
+            "destination": "/posts/website-migration-wordpress/:splat"
+        },
+        {
+            "source": "/2016/10/09/20/*",
+            "destination": "/posts/beijing-trip-2016/:splat"
+        },
+        {
+            "source": "/2016/11/17/21/*",
+            "destination": "/posts/painful-os-reinstallation/:splat"
+        },
+        {
+            "source": "/2016/12/25/22/*",
+            "destination": "/posts/enabling-https/:splat"
+        },
+        {
+            "source": "/2017/01/23/23/*",
+            "destination": "/posts/adding-more-social-icons/:splat"
+        },
+        {
+            "source": "/2017/01/23/24/*",
+            "destination": "/posts/loving-the-terminal-msys2/:splat"
+        },
+        {
+            "source": "/2017/02/23/25/*",
+            "destination": "/posts/windows-with-aero-glass-is-beautiful/:splat"
+        },
+        {
+            "source": "/2017/02/25/26/*",
+            "destination": "/posts/guoguo-new-computer-intel-7700k/:splat"
+        },
+        {
+            "source": "/2017/03/09/27/*",
+            "destination": "/posts/turning-20/:splat"
+        },
+        {
+            "source": "/2017/03/24/28/*",
+            "destination": "/posts/shiniyuku-kimi-yakata-ni-mebuku-zouo/:splat"
+        },
+        {
+            "source": "/2017/04/13/29/*",
+            "destination": "/posts/cpp-primer-and-cpp-primer-plus/:splat"
+        },
+        {
+            "source": "/2017/05/18/30/*",
+            "destination": "/posts/embracing-hexo-framework/:splat"
+        },
         {
             "source": "/2017/06/11/31/*",
             "destination": "/posts/common-punctuation-marks/:splat"
@@ -177,24 +161,8 @@
             "destination": "/posts/euphoria/:splat"
         },
         {
-            "source": "/2017/07/23/37/*",
-            "destination": "/posts/subarashiki-hibi-furenzoku-sonzai/:splat"
-        },
-        {
             "source": "/2017/07/30/38/*",
             "destination": "/posts/dekinai-watashi-ga-kurikaesu/:splat"
-        },
-        {
-            "source": "/2017/07/31/40/*",
-            "destination": "/posts/suicide-plan-2017/:splat"
-        },
-        {
-            "source": "/2017/08/04/41/*",
-            "destination": "/posts/senren-banka/:splat"
-        },
-        {
-            "source": "/2017/08/04/42/*",
-            "destination": "/posts/narcissu/:splat"
         },
         {
             "source": "/2018/03/30/43/*",
