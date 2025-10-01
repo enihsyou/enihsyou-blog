@@ -542,9 +542,40 @@ comments:
 # Disqus
 # For more information: https://disqus.com
 disqus:
-  enable: true
+  enable: false
   shortname: enihsyou
   count: false
+
+# Giscus comments system powered by GitHub Discussions for NexT.
+# https://github.com/next-theme/hexo-next-giscus
+giscus:
+  enable: false
+  repo: enihsyou/enihsyou-blog-discuss
+  repo_id: R_kgDOP1vLsg
+  category: Announcements
+  category_id: DIC_kwDOP1vLss4Cv0qM
+  # Available values: pathname | url | title | og:title
+  mapping: pathname
+  # Available values: 0 | 1
+  reactions_enabled: 1
+   # Available values: 0 | 1
+  emit_metadata: 0
+  # Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | preferred_color_scheme | transparent_dark | noborder_light | noborder_dark | noborder_gray | cobalt | purple_dark
+  theme: http://localhost:4000/css/giscus.css
+  # Available values: en | zh-CN
+  lang: zh-CN
+  # Place the comment box above the comments
+  input_position: top
+  # Load the comments lazily
+  loading: lazy
+
+# Twikoo, a simple, safe, free comment system.
+# https://twikoo.js.org/frontend.html
+twikoo:
+  enable: true
+  visitor: true
+  envId: https://twikoo.kokomi.me/
+  region: ap-guangzhou
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
