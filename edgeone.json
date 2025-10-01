@@ -149,96 +149,80 @@
             "source": "/2017/05/18/30/",
             "destination": "/posts/embracing-hexo-framework/",
             "statusCode": 302
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/2017/06/11/31/*",
+            "destination": "/posts/common-punctuation-marks/:splat"
         },
         {
-            "source": "/2017/06/11/31/",
-            "destination": "/posts/common-punctuation-marks/",
-            "statusCode": 302
+            "source": "/2017/06/15/32/*",
+            "destination": "/posts/kokoro-by-natsume-soseki/:splat"
         },
         {
-            "source": "/2017/06/15/32/",
-            "destination": "/posts/kokoro-by-natsume-soseki/",
-            "statusCode": 302
+            "source": "/2017/06/28/33/*",
+            "destination": "/posts/shayou-by-dazai-osamu/:splat"
         },
         {
-            "source": "/2017/06/28/33/",
-            "destination": "/posts/shayou-by-dazai-osamu/",
-            "statusCode": 302
+            "source": "/2017/06/30/34/*",
+            "destination": "/posts/important-new-checkpoint/:splat"
         },
         {
-            "source": "/2017/06/30/34/",
-            "destination": "/posts/important-new-checkpoint/",
-            "statusCode": 302
+            "source": "/2017/07/16/35/*",
+            "destination": "/posts/inochi-no-spare/:splat"
         },
         {
-            "source": "/2017/07/16/35/",
-            "destination": "/posts/inochi-no-spare/",
-            "statusCode": 302
+            "source": "/2017/07/18/36/*",
+            "destination": "/posts/euphoria/:splat"
         },
         {
-            "source": "/2017/07/18/36/",
-            "destination": "/posts/euphoria/",
-            "statusCode": 302
+            "source": "/2017/07/23/37/*",
+            "destination": "/posts/subarashiki-hibi-furenzoku-sonzai/:splat"
         },
         {
-            "source": "/2017/07/23/37/",
-            "destination": "/posts/subarashiki-hibi-furenzoku-sonzai/",
-            "statusCode": 302
+            "source": "/2017/07/30/38/*",
+            "destination": "/posts/dekinai-watashi-ga-kurikaesu/:splat"
         },
         {
-            "source": "/2017/07/30/38/",
-            "destination": "/posts/dekinai-watashi-ga-kurikaesu/",
-            "statusCode": 302
+            "source": "/2017/07/31/40/*",
+            "destination": "/posts/suicide-plan-2017/:splat"
         },
         {
-            "source": "/2017/07/31/40/",
-            "destination": "/posts/suicide-plan-2017/",
-            "statusCode": 302
+            "source": "/2017/08/04/41/*",
+            "destination": "/posts/senren-banka/:splat"
         },
         {
-            "source": "/2017/08/04/41/",
-            "destination": "/posts/senren-banka/",
-            "statusCode": 302
+            "source": "/2017/08/04/42/*",
+            "destination": "/posts/narcissu/:splat"
         },
         {
-            "source": "/2017/08/04/42/",
-            "destination": "/posts/narcissu/",
-            "statusCode": 302
+            "source": "/2018/03/30/43/*",
+            "destination": "/posts/kotlin-and-spring-are-good-friends/:splat"
         },
         {
-            "source": "/2018/03/30/43/",
-            "destination": "/posts/kotlin-and-spring-are-good-friends/",
-            "statusCode": 302
+            "source": "/2018/05/09/44/*",
+            "destination": "/posts/two-methods-of-thread-sleep/:splat"
         },
         {
-            "source": "/2018/05/09/44/",
-            "destination": "/posts/two-methods-of-thread-sleep/",
-            "statusCode": 302
+            "source": "/2018/08/18/45/*",
+            "destination": "/posts/sequential-assignment-for-rows-with-multi-column-duplicates/:splat"
         },
         {
-            "source": "/2018/08/18/45/",
-            "destination": "/posts/sequential-assignment-for-rows-with-multi-column-duplicates/",
-            "statusCode": 302
+            "source": "/2018/08/24/46/*",
+            "destination": "/posts/ubuntu-18-04-with-netease-cloud-music/:splat"
         },
         {
-            "source": "/2018/08/24/46/",
-            "destination": "/posts/ubuntu-18-04-with-netease-cloud-music/",
-            "statusCode": 302
+            "source": "/2018/10/08/47/*",
+            "destination": "/posts/create-apfs-ramdisk-with-unused-macos-memory/:splat"
         },
         {
-            "source": "/2018/10/08/47/",
-            "destination": "/posts/create-apfs-ramdisk-with-unused-macos-memory/",
-            "statusCode": 302
+            "source": "/2019/02/04/48/*",
+            "destination": "/posts/the-persistent-problem-of-macos-ramdisk-backup/:splat"
         },
         {
-            "source": "/2019/02/04/48/",
-            "destination": "/posts/the-persistent-problem-of-macos-ramdisk-backup/",
-            "statusCode": 302
-        },
-        {
-            "source": "/2020/07/22/49/",
-            "destination": "/posts/emacs-shortcuts-on-macos/",
-            "statusCode": 302
+            "source": "/2020/07/22/49/*",
+            "destination": "/posts/emacs-shortcuts-on-macos/:splat"
         }
     ]
 }
