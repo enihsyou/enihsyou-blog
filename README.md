@@ -1,5 +1,7 @@
 # Source for Personal Blog Site
 
+[![本项目使用 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://console.cloud.tencent.com/edgeone/pages/new?repository-url=https%3A%2F%2Fgithub.com%2Fenihsyou%2Fenihsyou-blog)
+
 ## How to Compose New Hexo Post
 
 每篇 post 有三个属性，定义了文件叫什么：
