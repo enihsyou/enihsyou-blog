@@ -192,5 +192,16 @@
             "source": "/2020/07/22/49/*",
             "destination": "/posts/emacs-shortcuts-on-macos/:splat"
         }
+    ],
+    "headers": [
+        {
+            "source": "/atom.xml",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/atom+xml; charset=utf-8"
+                }
+            ]
+        }
     ]
 }
