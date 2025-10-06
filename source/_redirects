@@ -3,6 +3,7 @@
 # vim: set syntax=plaintext tabstop=4 noexpandtab
 # 把旧的 :year/:month/:day/:id/ 格式的文章链接
 # 定向至 posts/:id/ 新格式，先采用 302 定向，验证后再改为 301 永久定向
+# note: 此文件已弃用，仅用作留档，功能已被 edgeone.json 接管
 
 /2015/02/22/1/*		/posts/new-arrival/:splat
 /2015/02/22/2/*		/posts/sakura-sakimashita/:splat
