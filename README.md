@@ -21,3 +21,11 @@ Hexo 帮我们做了许多工作，比如新建文章时把 title 转换为 slug
 ```shell
 pnpm exec hexo new --id my-new-post 我新建的文章
 ```
+
+## 构建发布
+
+```shell
+pnpm exec hexo generate
+```
+
+可以忽略在 `.njk` 文件中发生的 `` Unable to call `next_url`, which is undefined or falsey `` 错误。

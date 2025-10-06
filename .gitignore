@@ -50,4 +50,7 @@ typings/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+# unnecessary archives
+source/*.zip
+# prevent large file uploads
 public.tar.gz
