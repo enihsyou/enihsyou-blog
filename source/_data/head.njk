@@ -1,3 +1,16 @@
+{# 
+  Umami Analytics
+  hexo-theme-next@8.24.1/layout/_third-party/analytics/umami.njk
+
+  config.host is set in scripts/next-injects.js
+ #}
+<script async defer 
+  data-website-id="{{ theme.umami.website_id }}"
+  data-do-not-track="true"
+  data-domains="{{ config.host }}"
+  src="{{ theme.umami.script_url }}"
+></script>
+
 {#
   Load JetBrains Mono 
   https://www.jsdelivr.com/package/npm/jetbrains-mono

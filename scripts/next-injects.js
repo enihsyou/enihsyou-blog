@@ -10,3 +10,9 @@
 //       { cache: true }
 //   );
 // });
+
+// add host to config for head.njk
+hexo.extend.filter.register("template_locals", function (locals) {
+  locals.config.host = new URL(locals.config.url).host;
+  return locals;
+});
