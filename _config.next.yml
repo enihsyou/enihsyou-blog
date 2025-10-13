@@ -587,6 +587,13 @@ twikoo:
 #  only_pageview: true
 #baidu_analytics: ca04a67d56ec0d49715125d38e937110
 
+# Umami Analytics
+# See: https://umami.is/
+umami:
+  enable: false # 实际是启用的，见 head.njk，会读取剩下的参数
+  script_url: https://umami.kokomi.me/script.js
+  website_id: 78ebed7a-22fc-462d-b234-b129535d0fc5
+
 # ---------------------------------------------------------------
 # Search Services
 # See: https://theme-next.js.org/docs/third-party-services/search-services
