@@ -19,7 +19,10 @@ minify: true
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
   head: source/_data/head.njk
-  footer: source/_data/footer.njk
+  # locate at '_datanext' other than '_data' to escape from 'hexo/dist/plugins/processor/data.js' from pre-processing
+  # njk files which contain NexT functions like next_url() which will lead to
+  # 'Unable to call `next_url`, which is undefined or falsey' error.
+  footer: source/_datanext/footer.njk
   style: source/_data/styles.styl
 
 # ---------------------------------------------------------------
