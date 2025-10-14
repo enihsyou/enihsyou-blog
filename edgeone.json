@@ -69,13 +69,13 @@
             "source": "/2016/01/06/14/",
             "destination": "/posts/life-by-luyao/",
             "statusCode": 302
-        }
-    ],
-    "rewrites": [
+        },
         {
             "source": "/2016/06/01/15/*",
             "destination": "/posts/python-sorting-algorithms-part-1/:splat"
-        },
+        }
+    ],
+    "rewrites": [
         {
             "source": "/2016/06/01/16/*",
             "destination": "/posts/python-sorting-algorithms-part-2/:splat"
@@ -191,7 +191,12 @@
         {
             "source": "/2020/07/22/49/*",
             "destination": "/posts/emacs-shortcuts-on-macos/:splat"
+        },
+        {
+            "source": "/umami.js",
+            "destination": "https://umami.kokomi.me/script.js"
         }
+
     ],
     "headers": [
         {
