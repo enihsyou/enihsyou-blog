@@ -594,7 +594,8 @@ twikoo:
 # See: https://umami.is/
 umami:
   enable: false # 实际是启用的，见 head.njk，会读取剩下的参数
-  script_url: https://umami.kokomi.me/script.js
+  script_url: https://blog.kokomi.me/umami.js
+  host_url: https://umami.kokomi.me
   website_id: 78ebed7a-22fc-462d-b234-b129535d0fc5
 
 # ---------------------------------------------------------------
