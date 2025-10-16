@@ -381,6 +381,7 @@ font:
   host: https://fonts.loli.net
 
   # Global font settings used for all elements inside <body>.
+  # Fonts loading script defines in source/_data/head.njk
   global:
     external: false
     # https://github.com/necolas/normalize.css/issues/665
@@ -389,7 +390,8 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: false
-    family: JetBrains Maple Mono, Maple Mono CN, JetBrains Mono, Cascadia Code, PT Mono
+    # 预先搜索本地字体，最后才是加载网络字体
+    family: JetBrains Maple Mono, JetBrains Mono, monospace
 
 # ---------------------------------------------------------------
 # SEO Settings
