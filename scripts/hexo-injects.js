@@ -21,17 +21,21 @@ hexo.extend.generator.register("travel-moe-svg", async function (locals) {
     return fetch(url).then(resp => resp.text());
   }
   const lightOption = {
-    "labelColor": "282726",
+    "logoColor": "FFFFFF", // 文字部分背景色
+    "labelColor": "D7D8D9",  // 图标部分背景色
   }
   const darkOption = {
-    "labelColor": "FFFFFF",
+    "logoColor": "000000",
+    "labelColor": "282726",
   }
   const logoBase64 = fs.readFileSync("source/images/travel-moe-logo.png");
   const logoDataUri = `data:image/png;base64,${logoBase64.toString('base64')}`;
   function makeUrl(option) {
     const url = new URL("https://img.shields.io/badge/异次元之旅");
-    url.pathname += "-" + option.labelColor;
+    url.pathname += "-" + option.logoColor;
     url.searchParams.set("logo", logoDataUri);
+    url.searchParams.set("logoSize", "auto");
+    url.searchParams.set("labelColor", option.labelColor)
     return url.toString();
   }
 

@@ -100,6 +100,7 @@ menu:
   about: /about/ || fa fa-user
   archives: /archives/ || fa fa-archive
   boradcast-channel: https://broadcast-channel.kokomi.me/ || fa fa-radio
+  obsidian: https://obsidian.kokomi.me/ || fa fa-book
   #schedule: /schedule/ || calendar
   sitemap: /sitemap.xml || fa fa-sitemap
 
