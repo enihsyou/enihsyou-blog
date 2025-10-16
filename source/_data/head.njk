@@ -15,23 +15,25 @@
 {#
   Load JetBrains Mono 
   https://www.jsdelivr.com/package/npm/jetbrains-mono
+  onload technique used here is suggested by https://web.dev/articles/defer-non-critical-css
  #}
 <link rel="preload" as="style" crossorigin
   href="https://cdn.jsdelivr.net/npm/jetbrains-mono/css/jetbrains-mono.min.css"
-  onload="this.rel='stylesheet'" />
+  onload="this.onload=null;this.rel='stylesheet'" />
 <noscript>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono/css/jetbrains-mono.min.css">
 </noscript>
 
 {#
   Load MiSans
-  https://www.jsdelivr.com/package/npm/misans-webfont
+  https://www.npmjs.com/package/misans-vf
+  mobeicanyue/misans-webfont 会优先加载 local 版本导致粗体失效，改用 misans-vf
  #}
 <link rel="preload" as="style" crossorigin
-  href="https://cdn.jsdelivr.net/npm/misans-webfont/misans/misans-regular/result.min.css"
-  onload="this.rel='stylesheet'" />
+  href="https://cdn.jsdelivr.net/npm/misans-vf@1.0.0/lib/MiSans.min.css"
+  onload="this.onload=null;this.rel='stylesheet'" />
 <noscript>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans-webfont/misans/misans-regular/result.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans-vf@1.0.0/lib/MiSans.min.css" />
 </noscript>
 
 {#
