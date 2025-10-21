@@ -378,20 +378,20 @@ github_banner:
 
 font:
   enable: true
-  host: https://fonts.loli.net
+  host: https://fontsapi.zeoseven.com
 
   # Global font settings used for all elements inside <body>.
   # Fonts loading script defines in source/_data/head.njk
   global:
     external: false
     # https://github.com/necolas/normalize.css/issues/665
-    family: MiSans VF, MiSans, -apple-system, system-ui
+    family: MiSans, -apple-system, system-ui
 
   # Font settings for <code> and code blocks.
   codes:
     external: false
     # 预先搜索本地字体，最后才是加载网络字体
-    family: JetBrains Maple Mono, JetBrains Mono, monospace
+    family: JetBrains Mono, JetBrains Maple Mono, monospace
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -568,7 +568,7 @@ giscus:
    # Available values: 0 | 1
   emit_metadata: 0
   # Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | preferred_color_scheme | transparent_dark | noborder_light | noborder_dark | noborder_gray | cobalt | purple_dark
-  theme: http://localhost:4000/css/giscus.css
+  theme: preferred_color_scheme
   # Available values: en | zh-CN
   lang: zh-CN
   # Place the comment box above the comments
@@ -583,7 +583,7 @@ twikoo:
   visitor: false
   envId: https://twikoo.kokomi.me/
   region: ap-guangzhou
-  jsUrl: https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js
+  jsUrl: https://registry.npmmirror.com/twikoo/1.6.44/files/dist/twikoo.min.js
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
@@ -633,13 +633,13 @@ vendors:
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Warning: If you are using the latest master branch of NexT, please set `internal: local`
-  internal: jsdelivr
+  internal: custom
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  plugins: jsdelivr
+  plugins: custom
   # Custom CDN URL
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-  custom_cdn_url:
+  custom_cdn_url: https://registry.npmmirror.com/${npm_name}/${version}/files/${npm_file}

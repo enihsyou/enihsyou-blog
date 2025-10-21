@@ -34,7 +34,8 @@
       "fonteditor-core": "2.1.11"
     },
     "patchedDependencies": {
-      "hexo-next-twikoo": "patches/hexo-next-twikoo.patch"
+      "hexo-next-twikoo": "patches/hexo-next-twikoo.patch",
+      "hexo-theme-next": "patches/hexo-theme-next.patch"
     }
   }
 }

@@ -1,0 +1,42 @@
+diff --git a/_vendors.yml b/_vendors.yml
+index 71311b52a53e331ba4abd441f3f1191198f66651..dfaa621d714ce9e1a67cd73c24478fd35232f287 100644
+--- a/_vendors.yml
++++ b/_vendors.yml
+@@ -12,6 +12,7 @@ fontawesome:
+   file: css/all.min.css
+   alias: font-awesome
+   integrity: sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=
++  lazy: true
+ prism:
+   name: prismjs
+   version: 1.30.0
+diff --git a/scripts/events/lib/vendors.js b/scripts/events/lib/vendors.js
+index 350df6793d7d753932bb7393dd8c49163dbd0691..f288dca27ea083bceebdca5ff8dd6269e403cd4a 100644
+--- a/scripts/events/lib/vendors.js
++++ b/scripts/events/lib/vendors.js
+@@ -49,6 +49,7 @@ module.exports = hexo => {
+     });
+     vendors[key] = {
+       url      : links[plugins] || links.cdnjs,
++      lazy     : value.lazy || false,
+       integrity: value.integrity
+     };
+   }
+diff --git a/scripts/helpers/engine.js b/scripts/helpers/engine.js
+index 6b2f703ac4cf88ed092927e697c7d7068e17791f..f169b377bde1e97c6d049f43cb3baa73d606f7b8 100644
+--- a/scripts/helpers/engine.js
++++ b/scripts/helpers/engine.js
+@@ -36,9 +36,12 @@ hexo.extend.helper.register('next_js', function(file, {
+ });
+ 
+ hexo.extend.helper.register('next_vendors', function(name) {
+-  const { url, integrity } = this.theme.vendors[name];
++  const { url, integrity, lazy = false } = this.theme.vendors[name];
+   const type = url.endsWith('css') ? 'css' : 'js';
+   if (type === 'css') {
++    if (lazy) {
++      return `<link rel="stylesheet" href="${url}" media="print"${integrity ? ` integrity="${integrity}" crossorigin="anonymous"` : ''} onload="this.onload=null;this.media='all'">`;
++    }
+     if (integrity) return `<link rel="stylesheet" href="${url}" integrity="${integrity}" crossorigin="anonymous">`;
+     return `<link rel="stylesheet" href="${url}">`;
+   }
