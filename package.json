@@ -32,6 +32,9 @@
   "pnpm": {
     "overrides": {
       "fonteditor-core": "2.1.11"
+    },
+    "patchedDependencies": {
+      "hexo-next-twikoo": "patches/hexo-next-twikoo.patch"
     }
   }
 }
