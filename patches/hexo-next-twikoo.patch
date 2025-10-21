@@ -1,0 +1,13 @@
+diff --git a/twikoo.njk b/twikoo.njk
+index c8387a2eea4d9898ee2763f06587f0be348025e7..58b7057633ff3d8689b812f2b8d0b3209bfbebb2 100644
+--- a/twikoo.njk
++++ b/twikoo.njk
+@@ -6,7 +6,7 @@ document.addEventListener('page:loaded', () => {
+   NexT.utils.loadComments(CONFIG.twikoo.el)
+     .then(() => NexT.utils.getScript(
+       CONFIG.twikoo.jsUrl || 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
+-      { condition: window.twikoo }
++      { condition: window.twikoo, attributes: { defer: true }, async: true }
+     ))
+     .then(() => {
+       twikoo.init(CONFIG.twikoo);

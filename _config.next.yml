@@ -580,9 +580,10 @@ giscus:
 # https://twikoo.js.org/frontend.html
 twikoo:
   enable: true
-  visitor: true
+  visitor: false
   envId: https://twikoo.kokomi.me/
   region: ap-guangzhou
+  jsUrl: https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
