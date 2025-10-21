@@ -13,32 +13,34 @@
 ></script>
 
 {#
-  Load JetBrains Mono 
-  https://www.jsdelivr.com/package/npm/jetbrains-mono
-  onload technique used here is suggested by https://web.dev/articles/defer-non-critical-css
+  Load JetBrains Maple Mono
+  https://fonts.zeoseven.com/items/521/
  #}
-<link rel="preload" as="style" crossorigin
-  href="https://cdn.jsdelivr.net/npm/jetbrains-mono/css/jetbrains-mono.min.css"
-  onload="this.onload=null;this.rel='stylesheet'" />
-<noscript>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono/css/jetbrains-mono.min.css">
-</noscript>
+<link rel="stylesheet" crossorigin
+  href="https://fontsapi.zeoseven.com/521/main/result.css"
+  media="print" onload="this.onload=null;this.media='all'" />
+<link rel="stylesheet" crossorigin
+  href="https://fontsapi.zeoseven.com/521/bold/result.css"
+  media="print" onload="this.onload=null;this.media='all'" />
 
 {#
   Load MiSans
-  https://www.npmjs.com/package/misans-vf
+  https://npmmirror.com/package/misans
   mobeicanyue/misans-webfont 会优先加载 local 版本导致粗体失效，改用 misans-vf
+  使用 jsdelivr CDN 会拖慢其他资源下载速度，改用 npmmirror CDN 优化中国大陆访问
+  而 misans-vf 由不在 npmmirror 的白名单里，换成 misans
+  onload technique used here is suggested by https://web.dev/articles/defer-non-critical-css
  #}
-<link rel="preload" as="style" crossorigin
-  href="https://cdn.jsdelivr.net/npm/misans-vf@1.0.0/lib/MiSans.min.css"
-  onload="this.onload=null;this.rel='stylesheet'" />
-<noscript>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans-vf@1.0.0/lib/MiSans.min.css" />
-</noscript>
+<link rel="stylesheet" crossorigin
+  href="https://registry.npmmirror.com/misans/4.1.0/files/lib/Normal/MiSans-Medium.min.css"
+  media="print" onload="this.onload=null;this.media='all'" />
+<link rel="stylesheet" crossorigin
+  href="https://registry.npmmirror.com/misans/4.1.0/files/lib/Normal/MiSans-Bold.min.css"
+  media="print" onload="this.onload=null;this.media='all'" />
 
 {#
   Preload Font Awesome
  #}
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/webfonts/fa-regular-400.woff2" as="font" crossorigin>
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/webfonts/fa-brands-400.woff2" as="font" crossorigin>
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/webfonts/fa-solid-900.woff2" as="font" crossorigin>
+<link rel="preload" href="https://registry.npmmirror.com/@fortawesome/fontawesome-free/7.0.0/files/webfonts/fa-regular-400.woff2" as="font" crossorigin>
+<link rel="preload" href="https://registry.npmmirror.com/@fortawesome/fontawesome-free/7.0.0/files/webfonts/fa-brands-400.woff2" as="font" crossorigin>
+<link rel="preload" href="https://registry.npmmirror.com/@fortawesome/fontawesome-free/7.0.0/files/webfonts/fa-solid-900.woff2" as="font" crossorigin>
