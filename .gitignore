@@ -54,3 +54,5 @@ typings/
 source/*.zip
 # prevent large file uploads
 public.tar.gz
+
+source/_posts/.obsidian
