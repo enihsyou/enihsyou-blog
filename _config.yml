@@ -171,3 +171,8 @@ minify:
   font:
     # 即便如此也需要强制设置版本 "fonteditor-core": "2.1.11"
     enable: false
+
+# add caption for iamges
+image_caption:
+  enable: true
+  class_name: image-caption
