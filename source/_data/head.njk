@@ -18,25 +18,22 @@
  #}
 <link rel="stylesheet" crossorigin
   href="https://fontsapi.zeoseven.com/521/main/result.css"
-  media="print" onload="this.onload=null;this.media='all'" />
+  media="print" onload="this.removeAttribute('onload');this.media='all'" />
 <link rel="stylesheet" crossorigin
   href="https://fontsapi.zeoseven.com/521/bold/result.css"
-  media="print" onload="this.onload=null;this.media='all'" />
+  media="print" onload="this.removeAttribute('onload');this.media='all'" />
 
 {#
   Load MiSans
-  https://npmmirror.com/package/misans
   mobeicanyue/misans-webfont 会优先加载 local 版本导致粗体失效，改用 misans-vf
   使用 jsdelivr CDN 会拖慢其他资源下载速度，改用 npmmirror CDN 优化中国大陆访问
-  而 misans-vf 由不在 npmmirror 的白名单里，换成 misans
+  而 misans-vf 由不在 npmmirror 的白名单里，换成 npm 的 misans 包
+  最后盗用小米汽车用的 CDN，作为小米车主我就用用
   onload technique used here is suggested by https://web.dev/articles/defer-non-critical-css
  #}
-<link rel="stylesheet" crossorigin
-  href="https://registry.npmmirror.com/misans/4.1.0/files/lib/Normal/MiSans-Medium.min.css"
-  media="print" onload="this.onload=null;this.media='all'" />
-<link rel="stylesheet" crossorigin
-  href="https://registry.npmmirror.com/misans/4.1.0/files/lib/Normal/MiSans-Bold.min.css"
-  media="print" onload="this.onload=null;this.media='all'" />
+<link rel="stylesheet"
+  href="https://cdn-font.hyperos.mi.com/font/css?family=MiSans_VF:VF:Chinese_Simplify,Latin&display=swap"
+  media="print" onload="this.removeAttribute('onload');this.media='all'" />
 
 {#
   Preload Font Awesome
