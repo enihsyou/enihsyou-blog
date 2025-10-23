@@ -92,7 +92,8 @@ search:
   path: search.xml
   field: post
   format: html
-  limit: 50
+  content: true
+  limit: 20
 
 #Sitemap
 #sitemap:

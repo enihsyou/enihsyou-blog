@@ -35,7 +35,7 @@ index 6b2f703ac4cf88ed092927e697c7d7068e17791f..f169b377bde1e97c6d049f43cb3baa73
    const type = url.endsWith('css') ? 'css' : 'js';
    if (type === 'css') {
 +    if (lazy) {
-+      return `<link rel="stylesheet" href="${url}" media="print"${integrity ? ` integrity="${integrity}" crossorigin="anonymous"` : ''} onload="this.onload=null;this.media='all'">`;
++      return `<link rel="stylesheet" href="${url}" media="print"${integrity ? ` integrity="${integrity}" crossorigin="anonymous"` : ''} onload="this.removeAttribute('onload');this.media='all'">`;
 +    }
      if (integrity) return `<link rel="stylesheet" href="${url}" integrity="${integrity}" crossorigin="anonymous">`;
      return `<link rel="stylesheet" href="${url}">`;
