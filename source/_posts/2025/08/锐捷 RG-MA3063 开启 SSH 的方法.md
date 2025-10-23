@@ -2,7 +2,7 @@
 title: 锐捷 RG-MA3063 开启 SSH 的方法
 id: enable-ssh-for-rg-ma3063
 date: 2025-08-12T13:51:05+08:00
-updated: 2025-10-23T01:50:05+08:00
+updated: 2025-10-23T13:15:25+08:00
 tags:
   - 网络
 categories:
@@ -13,6 +13,18 @@ categories:
 互联网上对设备解锁 SSH 的方法好多都放在 Paywall 后面藏着掖着，其实只需要访问 `/__factory_verify_mode__` 端点就能免刷机开启 SSH 和 Telnet 服务。
 
 <!-- more -->
+
+{% note success "TL;DR" %}
+
+节约时间先列答案，后文再述过程原因
+
+```shellsession
+$ curl http://192.168.10.1/__factory_verify_mode__
+$ ssh 192.168.10.1 -l admin -o "HostKeyAlgorithms +ssh-rsa"
+admin@192.168.10.1's password: wifi@cmcc
+```
+
+{% endnote %}
 
 ## 怪事起因
 
@@ -195,6 +207,7 @@ Host 192.168.10.1
 ## 后续操作
 
 路由器是个 Overlay 文件系统，对 ROM 的变更重启并不会重置，并且恢复出厂可以治疗大部分毛病，随意折腾。
+我的目标是 [关闭 DNS 劫持](#关闭%20DNS%20劫持)。
 
 ### 添加 SSH 密钥登录
 
