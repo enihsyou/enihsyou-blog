@@ -9,7 +9,7 @@ overrides:
 
 patchedDependencies:
   hexo-highlight-shiki:
-    hash: 76e44ddd62c4175aff11fa25bdfd382add9065d9691995f2880eafa587aaf4d4
+    hash: dcea85dc3d615e3a9d2fb86df891165ff2c02e86e5caa772527c94e1452aa0f6
     path: patches/hexo-highlight-shiki.patch
   hexo-next-twikoo:
     hash: 3bb4e35403d73a0cec3c0b6719483749e41a947c983af4575e6d9258ba0dd74e
@@ -48,7 +48,7 @@ importers:
         version: 2.0.0
       hexo-highlight-shiki:
         specifier: ^2.1.0
-        version: 2.1.0(patch_hash=76e44ddd62c4175aff11fa25bdfd382add9065d9691995f2880eafa587aaf4d4)(hexo@7.3.0(chokidar@3.6.0))
+        version: 2.1.0(patch_hash=dcea85dc3d615e3a9d2fb86df891165ff2c02e86e5caa772527c94e1452aa0f6)(hexo@7.3.0(chokidar@3.6.0))
       hexo-minify:
         specifier: ^1.8.1
         version: 1.8.1
@@ -4183,7 +4183,7 @@ snapshots:
     dependencies:
       hexo-pagination: 3.0.0
 
-  hexo-highlight-shiki@2.1.0(patch_hash=76e44ddd62c4175aff11fa25bdfd382add9065d9691995f2880eafa587aaf4d4)(hexo@7.3.0(chokidar@3.6.0)):
+  hexo-highlight-shiki@2.1.0(patch_hash=dcea85dc3d615e3a9d2fb86df891165ff2c02e86e5caa772527c94e1452aa0f6)(hexo@7.3.0(chokidar@3.6.0)):
     dependencies:
       hexo: 7.3.0(chokidar@3.6.0)
       shiki: 3.13.0
