@@ -8,7 +8,7 @@ categories:
 date: 2015-02-27 20:07:51
 ---
 
-{% asset_img 9d340313gw1eqdlzl7djfj20zj0jywl5-small.jpg "すぴぱら STORY #01 - Spring Has Come ! 攻略完成" %}
+![すぴぱら STORY #01 - Spring Has Come ! 攻略完成](9d340313gw1eqdlzl7djfj20zj0jywl5-small.jpg)
 
 这是一个关于幸福和愿望的故事
 

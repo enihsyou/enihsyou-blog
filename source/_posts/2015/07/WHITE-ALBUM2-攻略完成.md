@@ -10,7 +10,7 @@ categories:
 date: 2015-07-31 23:35:48
 ---
 
-{% asset_img 9d340313gw1eumdn74pqdj20zk0k0jw7-1280x720.jpg "WHITE ALMUM2 中的小木曽雪菜" %}
+![WHITE ALMUM2 中的小木曽雪菜](9d340313gw1eumdn74pqdj20zk0k0jw7-1280x720.jpg)
 
 感受丸戸史明的恶意
 
@@ -20,7 +20,7 @@ date: 2015-07-31 23:35:48
 
 接触契机是她的歌曲、前奏出来就能感受出 **就是你啦** 的那种声线！
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=1&id=3157178&auto=0&height=430"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="https://music.163.com/outchain/player?type=1&id=3157178&auto=0&height=430"></iframe>
 * * *
 
 &nbsp;
@@ -93,13 +93,13 @@ date: 2015-07-31 23:35:48
 
 接下来还有顺带一些附属品。
 
-*   雪が解け、そして雪が降るまで
-*   Twinkle Snow ～夢想～
-*   歌を忘れた偶像
-*   彼の神様、あいつの救世主
-*   祭りの前 ~ふたりの24時間~ 祭りの日 ~舞台の下の物語~
-*   祭りの後～雪菜の三十分～
-*   一泊二日の凱旋
+* 雪が解け、そして雪が降るまで
+* Twinkle Snow ～夢想～
+* 歌を忘れた偶像
+* 彼の神様、あいつの救世主
+* 祭りの前 ~ふたりの24時間~ 祭りの日 ~舞台の下の物語~
+* 祭りの後～雪菜の三十分～
+* 一泊二日の凱旋
 
 剧情更详细严密了、然后我知道有些还加到动画化内容里了
 

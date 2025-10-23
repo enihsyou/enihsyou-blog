@@ -10,7 +10,7 @@ tags:
 categories:
   - 强化
 ---
-{% asset_img hexo-logo-avatar-transparent-background.png "Hexo" %}
+![Hexo](hexo-logo-avatar-transparent-background.png)
 
 [Hexo](https://hexo.io/zh-cn/)是个博客框架，通过解析markdown写作的文档，生成静态HTML网页，以超快的速度著称。
 
