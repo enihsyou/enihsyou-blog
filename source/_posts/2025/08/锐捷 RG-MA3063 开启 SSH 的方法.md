@@ -2,7 +2,7 @@
 title: 锐捷 RG-MA3063 开启 SSH 的方法
 id: enable-ssh-for-rg-ma3063
 date: 2025-08-12T13:51:05+08:00
-updated: 2025-10-23T13:15:25+08:00
+updated: 2025-10-23T19:43:03+08:00
 tags:
   - 网络
 categories:
@@ -66,20 +66,20 @@ admin@192.168.10.1's password: wifi@cmcc
 在介绍之前先看看我手头的设备是否和你相同，未来固件版本保不齐会失效。
 不过很神奇的，每个地方显示的版本号都不一样 😅
 
-```txt 管理页面 - 设备详细信息
+```txt title="管理页面 - 设备详细信息"
 设备型号： RG-MA3063
 硬件版本： 1.00
 软件版本： MA_2.1(3)
 ```
 
-```make /etc/rj_issues
+```make title="/etc/rj_issues"
 System description      : RG-MA3063-<wuhu3-cmcc-sh>
 System hardware version : 2.00
 System software version : MA_2.1(3)B6P13, Release(10211501)
 Build time              : 2023/09/15 01:04:23
 ```
 
-```txt OpenWrt LuCI
+```txt title="OpenWrt LuCI"
 Software: MA_1.1(1) / Model: RG-MA3063 / Vendor: Ruijie
 ```
 
@@ -94,7 +94,7 @@ Software: MA_1.1(1) / Model: RG-MA3063 / Vendor: Ruijie
 
 {% note info 至于为什么，剧透一下是分配了两个 IP 到同一张网卡上 %}
 
-```shellsession Dual IPv4 on One Interface
+```shellsession title="Dual IPv4 on One Interface"
 # ip -4 addr show br-lan  
 13: br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
     inet 192.168.9.6/24 brd 192.168.9.255 scope global br-lan
@@ -183,7 +183,7 @@ root@OpenWrt:/#
 我建议登录后立即添加 SSH 密钥对，并把连接信息记录在自己的 `~/.ssh/config` 上免得以后重复输入。
 注意使用的客户端密钥对也得是 RSA 算法的，ed25519 无法使用。
 
-```ssh-config
+```ssh-config title="~/.ssh/config"
 Host 192.168.10.1
   User admin
   HostKeyAlgorithms +ssh-rsa
