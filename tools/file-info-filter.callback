@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# 文件用在 git filter-repo --file-info-callback file-info-filter.callback
+# 详细介绍见 https://blog.kokomi.me/posts/moving-away-from-git-lfs
+
+def file_info_callback(filename, mode, blob_id, value):
+    # 加载之前记录的每个路径最新的 blob
+    # 文件格式为每一行: path blob_id
+    if 'last_blobs' not in value.data:
+        with open('last_blobs.txt', 'rb') as f:
+            file_blobs_map = dict(line.strip().rsplit(b' ', 1) for line in f if line.strip())
+        value.data['last_blobs'] = file_blobs_map
+    else:
+        file_blobs_map = value.data['last_blobs']
+
+    # 加载之前记录的每个路径是否被保留
+    # 文件格式为每一行: path
+    if 'kept_files' not in value.data:
+        with open('kept_files.txt', 'rb') as f:
+            kept_files_set = {line.strip() for line in f if line.strip()}
+        value.data['kept_files'] = kept_files_set
+    else:
+        kept_files_set = value.data['kept_files']
+
+    if (
+        # 不是软链接
+        mode != b'120000' and
+        # 不是子模块
+        mode != b'160000' and
+        # 只处理大型文件
+        filename.endswith((b'.jpg', b'.png', b'.pdf', b'.zip'))
+    ) and (
+        # 如果文件名不在保留列表中，那么就不保留
+        filename not in kept_files_set or
+        # 如果文件名在保留列表中，但是 blob_id 不是最新的，那么也不保留
+        file_blobs_map.get(filename, blob_id) != blob_id
+    ):
+        # 以0字节的 blob_id 代表不保留
+        blob_id = value.insert_file_with_contents(b'')
+    return (filename, mode, blob_id)
+
+
+return file_info_callback(filename, mode, blob_id, value)
