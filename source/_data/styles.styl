@@ -39,3 +39,15 @@
 .post-block .post-title {
   font-weight: bold;
 }
+
+// 自定一个主题色相近的代码高亮风格
+@media (prefers-color-scheme:dark) {
+    .shiki,
+    .shiki span {
+        color: var(--shiki-dark) !important;
+        background-color: var(--highlight-background) !important;
+        font-style: var(--shiki-dark-font-style) !important;
+        font-weight: var(--shiki-dark-font-weight) !important;
+        text-decoration: var(--shiki-dark-text-decoration) !important
+    }
+}

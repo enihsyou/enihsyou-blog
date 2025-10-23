@@ -48,13 +48,12 @@ post_asset_folder: true
 relative_link: false
 future: true
 
-syntax_highlighter: highlight.js
-highlight:
-  line_number: false
-  auto_detect: false
-  tab_replace: ""
-  wrap: false
-  hljs: true
+syntax_highlighter: "shiki"
+highlight: 
+  enable: false
+prismjs: 
+  enable: false
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -149,7 +148,7 @@ markdown:
 ## Hexo-minify Default Config Options
 minify:
   preview: false ## 本地预览时是否压缩
-  exclude: ['*.min.*']
+  exclude: ["*.min.*"]
   js:
     enable: true
     sourceMap:
@@ -181,3 +180,10 @@ minify:
 image_caption:
   enable: true
   class_name: image-caption
+
+shiki:
+  themes:
+    dark: "github-dark"
+    light: "github-light"
+  autoInjectCSS: false
+  loadAllLanguages: true

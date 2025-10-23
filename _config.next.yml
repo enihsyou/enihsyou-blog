@@ -342,7 +342,8 @@ codeblock:
     # Available values: default | flat | mac
     style: mac
   # Display language name
-  language: true
+  # 如果启用了 shiki 这里的语言名称会固定为错误的 SHIKI 
+  language: false
 
 back2top:
   enable: true
