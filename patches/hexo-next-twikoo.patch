@@ -7,7 +7,7 @@ index c8387a2eea4d9898ee2763f06587f0be348025e7..58b7057633ff3d8689b812f2b8d0b320
      .then(() => NexT.utils.getScript(
        CONFIG.twikoo.jsUrl || 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
 -      { condition: window.twikoo }
-+      { condition: window.twikoo, attributes: { defer: true }, async: true }
++      { condition: window.twikoo, attributes: { defer: true } }
      ))
      .then(() => {
        twikoo.init(CONFIG.twikoo);

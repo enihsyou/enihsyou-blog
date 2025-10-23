@@ -9,10 +9,10 @@ overrides:
 
 patchedDependencies:
   hexo-next-twikoo:
-    hash: 9108a43b825e9a065319693dd9ee1e827bb0305660684ca00a7522ec42292355
+    hash: 3bb4e35403d73a0cec3c0b6719483749e41a947c983af4575e6d9258ba0dd74e
     path: patches/hexo-next-twikoo.patch
   hexo-theme-next:
-    hash: 64f32a64ee762cd9e31a595a083879ff9670de48917c6373e7a56fa0b064cee3
+    hash: dd80e7b0e673badb247f9e121b19c76215e0e4fda60ef691ef5fcf1ab2b26e15
     path: patches/hexo-theme-next.patch
 
 importers:
@@ -34,6 +34,9 @@ importers:
       hexo-generator-index:
         specifier: ^4.0.0
         version: 4.0.0
+      hexo-generator-searchdb:
+        specifier: ^1.5.0
+        version: 1.5.0(chokidar@3.6.0)
       hexo-generator-sitemap:
         specifier: ^3.0.1
         version: 3.0.1(chokidar@3.6.0)
@@ -45,7 +48,7 @@ importers:
         version: 1.8.1
       hexo-next-twikoo:
         specifier: ^1.0.3
-        version: 1.0.3(patch_hash=9108a43b825e9a065319693dd9ee1e827bb0305660684ca00a7522ec42292355)
+        version: 1.0.3(patch_hash=3bb4e35403d73a0cec3c0b6719483749e41a947c983af4575e6d9258ba0dd74e)
       hexo-renderer-ejs:
         specifier: ^2.0.0
         version: 2.0.0
@@ -60,7 +63,7 @@ importers:
         version: 0.0.1
       hexo-theme-next:
         specifier: ^8.25.0
-        version: 8.25.0(patch_hash=64f32a64ee762cd9e31a595a083879ff9670de48917c6373e7a56fa0b064cee3)
+        version: 8.25.0(patch_hash=dd80e7b0e673badb247f9e121b19c76215e0e4fda60ef691ef5fcf1ab2b26e15)
       hexo-wordcount:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1097,6 +1100,9 @@ packages:
   hexo-generator-index@4.0.0:
     resolution: {integrity: sha512-KeM7mOCKWINGFAk1E+CkjMMgqFIv8oaRbGxR7ipkQAp44o4aopkVftma4sdIplOq9WQEWfVYDUK5gEv9J3nzUg==}
     engines: {node: '>=18'}
+
+  hexo-generator-searchdb@1.5.0:
+    resolution: {integrity: sha512-d0b5SueDxJimTFaHpPg430FQFx7DtMkmEIHo0UTOjXWRy+eDqNSp1CuS04P7fWzMnH2h+aQc6O9D2yY+3sdAUg==}
 
   hexo-generator-sitemap@3.0.1:
     resolution: {integrity: sha512-n+0KLNmq6TLbiZPTQF6NY5MbEem/O+DFx0lgQZNQcU4tdjXIZRrQJs+KRKeT66NTkdlYTqb4WwCxswLqQz0crA==}
@@ -3934,6 +3940,12 @@ snapshots:
     dependencies:
       hexo-pagination: 3.0.0
 
+  hexo-generator-searchdb@1.5.0(chokidar@3.6.0):
+    dependencies:
+      nunjucks: 3.2.4(chokidar@3.6.0)
+    transitivePeerDependencies:
+      - chokidar
+
   hexo-generator-sitemap@3.0.1(chokidar@3.6.0):
     dependencies:
       hexo-util: 2.7.0
@@ -3971,7 +3983,7 @@ snapshots:
       - bluebird
       - supports-color
 
-  hexo-next-twikoo@1.0.3(patch_hash=9108a43b825e9a065319693dd9ee1e827bb0305660684ca00a7522ec42292355):
+  hexo-next-twikoo@1.0.3(patch_hash=3bb4e35403d73a0cec3c0b6719483749e41a947c983af4575e6d9258ba0dd74e):
     dependencies:
       '@next-theme/utils': 1.3.0
 
@@ -4019,7 +4031,7 @@ snapshots:
 
   hexo-tag-kbd@0.0.1: {}
 
-  hexo-theme-next@8.25.0(patch_hash=64f32a64ee762cd9e31a595a083879ff9670de48917c6373e7a56fa0b064cee3): {}
+  hexo-theme-next@8.25.0(patch_hash=dd80e7b0e673badb247f9e121b19c76215e0e4fda60ef691ef5fcf1ab2b26e15): {}
 
   hexo-util@2.5.0:
     dependencies:
