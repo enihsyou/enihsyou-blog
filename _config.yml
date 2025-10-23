@@ -141,6 +141,10 @@ markdown:
     permalink: true
     permalinkClass: header-anchor
     permalinkSymbol: ¶
+  images:
+    lazyload: true
+    prepend_root: true
+    post_asset: true
 
 ## Hexo-minify Default Config Options
 minify:

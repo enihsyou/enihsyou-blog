@@ -10,11 +10,12 @@ tags:
 date: 2015-06-18 00:43:47
 ---
 
-{% asset_img 9d340313tw1et7k7v3dvzj20iz0qoaoh-small.jpg "Ever17 -the out of infinity-" %}
+![Ever17 -the out of infinity-](9d340313tw1et7k7v3dvzj20iz0qoaoh-small.jpg)
 
 没玩完 = 全没玩
 <!--more-->
 * * *
+
 # Ever17 -the out of infinity-
 
 早先就在攻略 **君と彼女と彼女の恋。** 后了解到了Meta类游戏.同时也就发现了这部被奉为神作的Ever17,半年后来通关.
@@ -71,7 +72,6 @@ Ever17,注重了文字上的意义,永远的17岁.Cure病毒带来的永生,其�
 
 如何去证明一个物体是真实存在的,说用看:肉眼感知可以作假;用摸:各种材质模拟也不是没有;用意念,就太天方夜谭了.即便是现在的技术还达不到完全的欺骗大脑,但长期环境下,习惯成自然.
 
-
 # 我 是谁?
 
 如若是一个AI,她自身就不是实体.和 我 这自我认知一样.Who am I?这个问题也是有科学上 人文上 心理上等讨论.游戏中提及了一点:Cure化永生之后, 我 的存在 在哪里? 是细胞 还是记忆 甚至是一个虚无缥缈的概念.并没有解释,应该也解释不了.
@@ -89,5 +89,5 @@ Ever17,注重了文字上的意义,永远的17岁.Cure病毒带来的永生,其�
 要论音乐,还没完全听过,主题节目的Karma 月海主题曲Heilmittel 印象深刻
 
 和大家分享两曲：
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4993317&auto=0&height=66"></iframe>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4993315&auto=0&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=4993317&auto=0&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=4993315&auto=0&height=66"></iframe>

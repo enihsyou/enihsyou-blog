@@ -8,7 +8,9 @@ categories:
   - 强化
 date: 2017-01-23 15:40:41
 ---
-<img src="/2017/01/23/24/terminal-icon.png" width=450px alt="Terminal" title="终端">
+
+<img src="/posts/loving-the-terminal-msys2/terminal-icon.png" width=450px alt="Terminal" title="终端">
+
 Terminal终端又方便又好用，可惜在Windows8.1平台上不提供。这次就安装了MSys2，实现Windows上的Linux环境。
 <!--more-->
 
@@ -20,11 +22,11 @@ Terminal终端又方便又好用，可惜在Windows8.1平台上不提供。这�
 
 根据 [Git for Windows Wiki页面](https://github.com/msysgit/msysgit/wiki) 的说明
 
-> *   _msysGit_ – is the name of this project, a _build environment_ to develop (i.e. _not_ to use) Git for Windows, which releases the official binaries
-> *   _MinGW_ – is a minimalist development environment for native Microsoft Windows applications (think: GCC to compile native Win32 applications).
-> *   _MSYS_ – is a minimal POSIX emulation layer providing a Bourne Shell command line interpreter system. It is used by the MinGW project (and others), was forked _in the past_ from Cygwin (think: a minimal POSIX emulation layer on top of the Win32 API)
-> *   _Cygwin_ – a Linux like environment, which was used in the past to build Git for Windows, nowadays has no relation to msysGit
-> *   _MSys2_ – is another fork of Cygwin with the same idea as MSYS, but it is kept up-to-date with Cygwin and it comes with a package management system called _Pacman_ (calling `pacman -Syu` will update all of the installed packages to their newest versions). MSys2 is the basis for the upcoming [successor of msysGit](https://git-for-windows.github.io/)
+> * _msysGit_ – is the name of this project, a _build environment_ to develop (i.e. _not_ to use) Git for Windows, which releases the official binaries
+> * _MinGW_ – is a minimalist development environment for native Microsoft Windows applications (think: GCC to compile native Win32 applications).
+> * _MSYS_ – is a minimal POSIX emulation layer providing a Bourne Shell command line interpreter system. It is used by the MinGW project (and others), was forked _in the past_ from Cygwin (think: a minimal POSIX emulation layer on top of the Win32 API)
+> * _Cygwin_ – a Linux like environment, which was used in the past to build Git for Windows, nowadays has no relation to msysGit
+> * _MSys2_ – is another fork of Cygwin with the same idea as MSYS, but it is kept up-to-date with Cygwin and it comes with a package management system called _Pacman_ (calling `pacman -Syu` will update all of the installed packages to their newest versions). MSys2 is the basis for the upcoming [successor of msysGit](https://git-for-windows.github.io/)
 
 这里还有很长的一段故事，关于分清MinGW MSYS Cygwin之间的关系。按照我的理解，这三个都可以用于在Windows下模拟Linux环境，都附带个MinTTY终端。MinGW可以直接编译Windows应用软件 生成exe文件，所以也被用在Code::Blocks等工具上 作为默认编译器。它还有个MinGW-w64，提供64位和32位的编译能力。而MSYS则是在MinGW的基础上提供了更多的库和工具。
 
@@ -50,7 +52,7 @@ HKEY_CLASSES_ROOT\Directory\background\shell\
 
 不过在这之前，别忘了切换到使用终端的目的是替换掉原先的cmd以及在Powershell中的一些操作，把Git Bash更加通用化。首先来安装git
 
-1.  更新软件包
+1. 更新软件包
 
     ```
     pacman  – needed -Sy bash pacman pacman-mirrors msys2-runtime
@@ -59,7 +61,7 @@ HKEY_CLASSES_ROOT\Directory\background\shell\
 
     不过在墙内直接运行的话，可能会有密钥失效的提示。这时候挂个代理就行，或者可能需要参照[这里](https://github.com/Alexpux/MSYS2-packages/issues/393)尝试一下。[这里](http://blog.csdn.net/jiutianhe/article/details/47608651)也提供了一些国内能用的源。
 
-2.  安装基础软件包(可选)
+2. 安装基础软件包(可选)
 
     ```
     pacman -S base-devel
@@ -86,7 +88,7 @@ HKEY_CLASSES_ROOT\Directory\background\shell\
 
     不过全部安装的话 体积也不小···
 
-3.  安装git
+3. 安装git
 
     ```
     pacman -Sl | grep git
@@ -100,7 +102,7 @@ HKEY_CLASSES_ROOT\Directory\background\shell\
 
     可得100MB+呢···
 
-4.  安装gcc
+4. 安装gcc
 
     ```
     pacman -S mingw-w64-x86_64-toolchain

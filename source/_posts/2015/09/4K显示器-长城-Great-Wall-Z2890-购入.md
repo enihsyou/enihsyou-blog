@@ -11,7 +11,7 @@ tags:
 date: 2015-09-15 21:47:56
 ---
 
-{% asset_img 57620e5fN802f169f.jpg "GreatWall Z2890" %}
+![GreatWall Z2890](57620e5fN802f169f.jpg)
 
 ##2016-03-13 UPDATE
 

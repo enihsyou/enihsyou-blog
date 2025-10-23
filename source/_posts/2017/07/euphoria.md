@@ -11,7 +11,7 @@ tags:
 categories:
   - GalGame
 ---
-{% asset_img euphoria-cover-art.png "euphoria" %}
+![euphoria](euphoria-cover-art.png)
 
 说是纯爱故事，可这等变态扭曲的爱情，实在是难叫人接受。
 探讨生命和爱情价值的纯爱向作品。
