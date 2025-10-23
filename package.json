@@ -37,7 +37,8 @@
     },
     "patchedDependencies": {
       "hexo-next-twikoo": "patches/hexo-next-twikoo.patch",
-      "hexo-theme-next": "patches/hexo-theme-next.patch"
+      "hexo-theme-next": "patches/hexo-theme-next.patch",
+      "hexo-highlight-shiki": "patches/hexo-highlight-shiki.patch"
     }
   }
 }
