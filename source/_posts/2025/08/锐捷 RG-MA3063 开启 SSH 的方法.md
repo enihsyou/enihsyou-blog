@@ -14,8 +14,8 @@ categories:
 
 <!-- more -->
 
-{% note success "TL;DR" %}
-
+{% note success %}
+## TL;DR
 节约时间先列答案，后文再述过程原因
 
 ```shellsession
