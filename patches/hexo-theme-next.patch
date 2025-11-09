@@ -23,7 +23,7 @@ index 350df6793d7d753932bb7393dd8c49163dbd0691..f288dca27ea083bceebdca5ff8dd6269
      };
    }
 diff --git a/scripts/helpers/engine.js b/scripts/helpers/engine.js
-index 6b2f703ac4cf88ed092927e697c7d7068e17791f..f169b377bde1e97c6d049f43cb3baa73d606f7b8 100644
+index 6b2f703ac4cf88ed092927e697c7d7068e17791f..b94d872639910d005e6af995724071eb18a7c6bf 100644
 --- a/scripts/helpers/engine.js
 +++ b/scripts/helpers/engine.js
 @@ -36,9 +36,12 @@ hexo.extend.helper.register('next_js', function(file, {
@@ -40,3 +40,15 @@ index 6b2f703ac4cf88ed092927e697c7d7068e17791f..f169b377bde1e97c6d049f43cb3baa73
      if (integrity) return `<link rel="stylesheet" href="${url}" integrity="${integrity}" crossorigin="anonymous">`;
      return `<link rel="stylesheet" href="${url}">`;
    }
+diff --git a/source/css/_common/components/post/post-body.styl b/source/css/_common/components/post/post-body.styl
+index 18b1d2df1976e5b525e668507884750b698fbc83..623c58c55f6a496fb98b14e7b5793d19673c15a4 100644
+--- a/source/css/_common/components/post/post-body.styl
++++ b/source/css/_common/components/post/post-body.styl
+@@ -25,7 +25,6 @@
+       opacity: 0;
+ 
+       &::before {
+-        font-family-icons('\f0c1');
+       }
+     }
+ 
