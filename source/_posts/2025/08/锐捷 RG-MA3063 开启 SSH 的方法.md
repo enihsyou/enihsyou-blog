@@ -2,7 +2,7 @@
 title: 锐捷 RG-MA3063 开启 SSH 的方法
 id: enable-ssh-for-rg-ma3063
 date: 2025-08-12T13:51:05+08:00
-updated: 2025-10-23T19:43:03+08:00
+updated: 2025-11-09T18:01:03+08:00
 tags:
   - 网络
 categories:
@@ -20,7 +20,7 @@ categories:
 
 ```shellsession
 $ curl http://192.168.10.1/__factory_verify_mode__
-$ ssh 192.168.10.1 -l admin -o "HostKeyAlgorithms +ssh-rsa"
+$ ssh 192.168.10.1 -l admin -o HostKeyAlgorithms=+ssh-rsa -o StrictHostKeyChecking=no
 admin@192.168.10.1's password: wifi@cmcc
 ```
 
@@ -61,6 +61,11 @@ admin@192.168.10.1's password: wifi@cmcc
   - [【转载】新版锐捷MA3063开启SSH方法 - 厂商技术专区 - 通信人家园 - Powered by C114](https://www.txrjy.com/thread-1352289-1-1.html) 但好在有好人转载了，注册回帖就能下载「新版锐捷 MA3063 开启 SSH 方法」。里面介绍了一种往隐藏路径构造请求来打开开发者模式的方式，见 [埋点脚本注入](#埋点脚本注入)。
 - [锐捷RG-MA3063另类的 开启SSH 原机openwrt 刷机 做集客AP 拆机 交换机 - 数码罗记](https://godsun.pro/blog/rui-jie-rg-ma3063) 这里不同于恩山的内容，独立提供了进入工厂模式的新方法，[一键开启开发者模式](#一键开启开发者模式) 懒人无感开启 SSH，并且提供了解密的关键密码。对我提供了极大的帮助
 
+解锁后会发现 Openwrt 版本非常古老，但有人尝试过刷机又或者编译，可以看看：
+
+- [ipq50xx: Support for IPQ5018 MP03.5-c1 | GitHub hzyitc/openwrt-redmi-ax3000](https://github.com/hzyitc/openwrt-redmi-ax3000/issues/59)
+- [中移RAX3000Q路由器解锁telnet/ssh及使用内置的OpenWrt](https://blog.imlk.top/posts/rax3000q-get-shell/)
+
 ## 设备信息
 
 在介绍之前先看看我手头的设备是否和你相同，未来固件版本保不齐会失效。
@@ -81,6 +86,10 @@ Build time              : 2023/09/15 01:04:23
 
 ```txt title="OpenWrt LuCI"
 Software: MA_1.1(1) / Model: RG-MA3063 / Vendor: Ruijie
+
+Model:            Qualcomm Technologies, Inc. IPQ5018/AP-MP03.5-C1
+Firmware Version:	OpenWrt Chaos Calmer 15.05.1 6f77ae728+r49254 / LuCI OW_5_0_PJ6_S9 branch (0.12.1)
+Kernel Version:  	4.4.60
 ```
 
 ## 操作流程
@@ -95,7 +104,7 @@ Software: MA_1.1(1) / Model: RG-MA3063 / Vendor: Ruijie
 {% note info 至于为什么，剧透一下是分配了两个 IP 到同一张网卡上 %}
 
 ```shellsession title="Dual IPv4 on One Interface"
-# ip -4 addr show br-lan  
+# ip -4 addr show br-lan
 13: br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
     inet 192.168.9.6/24 brd 192.168.9.255 scope global br-lan
        valid_lft forever preferred_lft forever
@@ -113,7 +122,7 @@ B 站播放最高的视频教你如何拆机接 TTL 刷机，本着「刷机有�
 
 ### 一键开启开发者模式
 
-来自数码罗记文章，操作非常简单，浏览器打开 [`http://192.168.10.1/__factory_verify_mode__`](http://192.168.10.1/__factory_verify_mode__)，记得替换成你的设备 IP
+这个方法来自数码罗记文章，操作非常简单，浏览器打开 [`http://192.168.10.1/__factory_verify_mode__`](http://192.168.10.1/__factory_verify_mode__)，记得替换成你的设备 IP
 
 > 猜测是通过解包固件找到的这个路由，
 > 从固件解包来看，这个路由实际是在触发由 `/eweb/api/handler.lua` 调用 `/etc/init.d/factory_mode_cfg.sh enable` 的指令
@@ -126,7 +135,7 @@ B 站播放最高的视频教你如何拆机接 TTL 刷机，本着「刷机有�
 
 ### 埋点脚本注入
 
-来自恩山论坛，需要先在浏览器网页登录，再进入开发者工具控制台输入
+这个方法来自恩山论坛，需要先在浏览器网页登录，再进入开发者工具控制台输入
 
 ```javascript
 fetch("http://192.168.10.1/api/v1/lua/DevelopMode/develop_mode_set", { method: "POST", body: JSON.stringify({ developMode: "1" }) });
@@ -138,7 +147,7 @@ fetch("http://192.168.10.1/api/v1/lua/DevelopMode/develop_mode_set", { method: "
 
 ### ~~狂点版本号~~
 
-也是来自数码罗记文章，不过从 `/eweb/script/Upgrade.lua` 的注释来看，2023.06.20 开始不再提供强制升级功能，所以应该失效了
+这个方法也是来自数码罗记文章，不过从 `/eweb/script/Upgrade.lua` 的注释来看，2023.06.20 开始不再提供强制升级功能，所以应该失效了
 
 - 登录路由器后台
 - 进入 `系统设置 > 系统升级 > 本地升级`
@@ -155,7 +164,7 @@ SSH 和 Telnet 使用用户名 `admin` 密码 `wifi@cmcc`
 
 ```shellsession
 $ ssh 192.168.10.1 -l admin -o "HostKeyAlgorithms +ssh-rsa"
-admin@192.168.10.1's password:
+admin@192.168.10.1's password: wifi@cmcc
 
 BusyBox v1.30.1 () built-in shell (ash)
 
@@ -199,7 +208,7 @@ Host 192.168.10.1
 执行 [埋点脚本注入](#埋点脚本注入) 或者登录上去手动 `/etc/init.d/dev_port_config.sh enable` 开启开发者模式后， [`192.168.10.1:8088`](http://192.168.10.1:8088) 便能访问 OpenWrt LuCI 界面了。使用用户名 `root` 和 *任意* 密码登入。空密码都行，其实直接点登录就行。
 
 {% note warning %}
-不要点击 `System > Start`，会回到非开发者模式
+不要点击 `System > Startup`，会回到非开发者模式
 {% endnote %}
 
 到此拿到了 OpenWrt 后台就属于获得了最高权限。
@@ -207,7 +216,7 @@ Host 192.168.10.1
 ## 后续操作
 
 路由器是个 Overlay 文件系统，对 ROM 的变更重启并不会重置，并且恢复出厂可以治疗大部分毛病，随意折腾。
-我的目标是 [关闭 DNS 劫持](#关闭%20DNS%20劫持)。
+我的目标是 [关闭 DNS 劫持](#关闭%20DNS%20劫持)，有高级需求的可以参考其他刷机教程。
 
 ### 添加 SSH 密钥登录
 
@@ -239,11 +248,11 @@ chmod 0600 /etc/dropbear/authorized_keys
 在 `/etc/config/rg_firewall` 中删掉几条 `dnsv4_hijack` 的规则。或者直接执行下面这段
 
 ```shell
-iptables  -t nat -D PREROUTING -i br-lan -p udp -m udp --dport 53 -j DNAT --to-destination 192.168.10.1  
+iptables  -t nat -D PREROUTING -i br-lan -p udp -m udp --dport 53 -j DNAT --to-destination 192.168.10.1
 ip6tables -t nat -D PREROUTING -i br-lan -p udp -m udp --dport 53 -j DNAT --to-destination fe80::e25d:54ff:fe7c:7f4
 
 ebtables -t broute -D BROUTING -p IPv4 --ip-proto udp --ip-dport 53 -j dnat --to-dst E0:5D:54:7C:07:F4 --dnat-target ACCEPT
-ebtables -t broute -D BROUTING -p IPv6 --ip6-proto udp --ip6-dport 53 -j dnat --to-dst E0:5D:54:7C:07:F4 --dnat-target ACCEPT  
+ebtables -t broute -D BROUTING -p IPv6 --ip6-proto udp --ip6-dport 53 -j dnat --to-dst E0:5D:54:7C:07:F4 --dnat-target ACCEPT
 ```
 
 然而好景不长，删掉的规则定时、重启都会重新添加回来，也包括删掉的 DNS 服务器部分，肯定是有进程在动手脚。
