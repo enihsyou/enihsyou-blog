@@ -15,7 +15,7 @@ patchedDependencies:
     hash: 3bb4e35403d73a0cec3c0b6719483749e41a947c983af4575e6d9258ba0dd74e
     path: patches/hexo-next-twikoo.patch
   hexo-theme-next:
-    hash: dd80e7b0e673badb247f9e121b19c76215e0e4fda60ef691ef5fcf1ab2b26e15
+    hash: 3e326bb477ec900b7bb71fba1ce2e7d0d43b15cf8b406c3477c2dd43a68f56f1
     path: patches/hexo-theme-next.patch
 
 importers:
@@ -69,7 +69,7 @@ importers:
         version: 0.0.1
       hexo-theme-next:
         specifier: ^8.25.0
-        version: 8.25.0(patch_hash=dd80e7b0e673badb247f9e121b19c76215e0e4fda60ef691ef5fcf1ab2b26e15)
+        version: 8.25.0(patch_hash=3e326bb477ec900b7bb71fba1ce2e7d0d43b15cf8b406c3477c2dd43a68f56f1)
       hexo-wordcount:
         specifier: ^6.0.1
         version: 6.0.1
@@ -4262,7 +4262,7 @@ snapshots:
 
   hexo-tag-kbd@0.0.1: {}
 
-  hexo-theme-next@8.25.0(patch_hash=dd80e7b0e673badb247f9e121b19c76215e0e4fda60ef691ef5fcf1ab2b26e15): {}
+  hexo-theme-next@8.25.0(patch_hash=3e326bb477ec900b7bb71fba1ce2e7d0d43b15cf8b406c3477c2dd43a68f56f1): {}
 
   hexo-util@2.5.0:
     dependencies:

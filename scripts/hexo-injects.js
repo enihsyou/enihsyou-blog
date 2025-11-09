@@ -50,7 +50,8 @@ hexo.extend.filter.register("after_post_render", function (data) {
   if (!hexo.config.image_caption || hexo.config.image_caption.enable !== false) {
     const { class_name = 'image-caption' } = hexo.config.image_caption;
     if (['post', 'page', 'about'].includes(data.layout)) {
-      data.content = data.content.replace(/(<img [^>]*alt="([^"]+)"[^>]*>)/g, `<figure class="${class_name}">$1<figcaption>$2</figcaption></figure>`);
+      // 同时移除紧随的换行符避免多余间距
+      data.content = data.content.replace(/(<img [^>]*alt="([^"]+)"[^>]*>)(<br>)?/g, `<figure class="${class_name}">$1<figcaption>$2</figcaption></figure>`);
     }
   }
   return data;
