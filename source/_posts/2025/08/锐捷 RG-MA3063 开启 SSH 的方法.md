@@ -15,7 +15,9 @@ categories:
 <!-- more -->
 
 {% note success %}
+
 ## TL;DR
+
 节约时间先列答案，后文再述过程原因
 
 ```shellsession
@@ -31,7 +33,6 @@ admin@192.168.10.1's password: wifi@cmcc
 我的主路由器 **ASUS RT-AX86U** 在局域网用 DNSmasq 提供 DHCP 和 DNS 服务，这样可以用主机名获取 DNS 解析。
 从淘宝办理的低价移动千兆宽带附带一个 **锐捷 RG-MA3063** 无线路由器，之前想着它的 EasyMesh 和华硕的不兼容也就吃灰好久。
 但后来房间角落信号不好，就把它掏出来改到桥接模式当个 AP 使用，没想到它的无线性能意外地强过华硕😅。
-
 ![Network Topology](network-topology.png)
 这是我的网络拓扑图（使用 [Isoflow | Network Diagrams](https://isoflow.io/) 绘制并截图），设备流量链路是这样： `Ruijie RG-MA3063 <=> ASUS RT-AX86U <=> HUAWEI HN8546X6-30 <=> Internet` 。
 
@@ -56,7 +57,7 @@ admin@192.168.10.1's password: wifi@cmcc
 
 在动手前查了很多网页和教程，但大部分都难以访问，但还是有部分有价值的内容。
 
-- [锐捷MA3063 信号相当强，59元入手刷机openwrt 冲！哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QQ4y1M7td/) 刷机教程，操作太糙了，还得买 TTL 高风险拆机刷机，Pass
+- [锐捷MA3063 信号相当强，59元入手刷机openwrt 冲！哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1QQ4y1M7td/) 刷机教程，操作太糙了，还得买 TTL 高风险拆机刷机，Pass
 - [锐捷MA3063系列中国移动定制版免拆开启ssh、删除插件、解除锁网限制(更新全版本通用)-OPENWRT专版-恩山无线论坛 - Powered by Discuz!](https://www.right.com.cn/forum/thread-8377493-1-1.html) 恩山的信息向来封闭，我没有权限访问
   - [【转载】新版锐捷MA3063开启SSH方法 - 厂商技术专区 - 通信人家园 - Powered by C114](https://www.txrjy.com/thread-1352289-1-1.html) 但好在有好人转载了，注册回帖就能下载「新版锐捷 MA3063 开启 SSH 方法」。里面介绍了一种往隐藏路径构造请求来打开开发者模式的方式，见 [埋点脚本注入](#埋点脚本注入)。
 - [锐捷RG-MA3063另类的 开启SSH 原机openwrt 刷机 做集客AP 拆机 交换机 - 数码罗记](https://godsun.pro/blog/rui-jie-rg-ma3063) 这里不同于恩山的内容，独立提供了进入工厂模式的新方法，[一键开启开发者模式](#一键开启开发者模式) 懒人无感开启 SSH，并且提供了解密的关键密码。对我提供了极大的帮助
@@ -116,11 +117,11 @@ Kernel Version:  	4.4.60
 
 > 另外如果你的路由器上有开启了 TProxy 的 MerlinClash，并且遇到局域网内跨网段访问不通的问题，可以看看我的解决方案 [2025-08-09 | Merlin Clash 的 TProxy IPTables 影响局域网内跨子网访问 | 涼果笔记](https://obsidian.kokomi.me/Diary/2025-08-09#merlin-clash-%E7%9A%84-tproxy-iptables-%E5%BD%B1%E5%93%8D%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E8%B7%A8%E5%AD%90%E7%BD%91%E8%AE%BF%E9%97%AE)
 
-## 进入工厂模式开启远程访问
+### 进入工厂模式开启远程访问
 
 B 站播放最高的视频教你如何拆机接 TTL 刷机，本着「刷机有风险」的观念，最好不刷机。好在互联网还是有简单些的方法的
 
-### 一键开启开发者模式
+#### 一键开启开发者模式
 
 这个方法来自数码罗记文章，操作非常简单，浏览器打开 [`http://192.168.10.1/__factory_verify_mode__`](http://192.168.10.1/__factory_verify_mode__)，记得替换成你的设备 IP
 
@@ -130,22 +131,25 @@ B 站播放最高的视频教你如何拆机接 TTL 刷机，本着「刷机有�
 返回 `{"result": "Pass"}` 就算成功，甚至都不需要去网页登录。
 现在防火墙会允许来自局域网对 SSH、FTP、Telnet 端口的访问，但**不会** 打开 8088 （OpenWrt LuCI）端口
 
-> 数码罗记的文章说 *联网后会被禁止 SSH 登录* ，但实测并不会。
+> 数码罗记的文章说 _联网后会被禁止 SSH 登录_ ，但实测并不会。
 > 不用断网哦，连着网有问题还能问问 AI
 
-### 埋点脚本注入
+#### 埋点脚本注入
 
 这个方法来自恩山论坛，需要先在浏览器网页登录，再进入开发者工具控制台输入
 
 ```javascript
-fetch("http://192.168.10.1/api/v1/lua/DevelopMode/develop_mode_set", { method: "POST", body: JSON.stringify({ developMode: "1" }) });
+fetch("http://192.168.10.1/api/v1/lua/DevelopMode/develop_mode_set", {
+  method: "POST",
+  body: JSON.stringify({ developMode: "1" }),
+});
 ```
 
 上面 [一键开启开发者模式](#一键开启开发者模式) 只会打开 22 端口访问，这个可以一并打开 8088 端口访问。
 
 > 从源码分析来看，这个路由实际是在触发 `/eweb/script/DevelopMode.lua` 调用 `/etc/init.d/dev_port_config.sh enable` 的指令。
 
-### ~~狂点版本号~~
+#### ~~狂点版本号~~
 
 这个方法也是来自数码罗记文章，不过从 `/eweb/script/Upgrade.lua` 的注释来看，2023.06.20 开始不再提供强制升级功能，所以应该失效了
 
@@ -154,7 +158,7 @@ fetch("http://192.168.10.1/api/v1/lua/DevelopMode/develop_mode_set", { method: "
 - 疯狂点击设备型号 5 次以上 - 开启强制升级！
 - 接着狂戳当前版本 5 次 - 开启开发者模式！
 
-## 远程连入
+### 远程连入
 
 上面的操作开启了 SSH 和 Telnet 服务，可以尝试连接了。
 
@@ -203,9 +207,9 @@ Host 192.168.10.1
 > 这密码也就是数码罗记提到了，不然还真猜不到。
 > 好在就算不知道也还有后路，进入 OpenWrt 后台可以改。
 
-## 进入后台
+### 进入后台
 
-执行 [埋点脚本注入](#埋点脚本注入) 或者登录上去手动 `/etc/init.d/dev_port_config.sh enable` 开启开发者模式后， [`192.168.10.1:8088`](http://192.168.10.1:8088) 便能访问 OpenWrt LuCI 界面了。使用用户名 `root` 和 *任意* 密码登入。空密码都行，其实直接点登录就行。
+执行 [埋点脚本注入](#埋点脚本注入) 或者登录上去手动 `/etc/init.d/dev_port_config.sh enable` 开启开发者模式后， [`192.168.10.1:8088`](http://192.168.10.1:8088) 便能访问 OpenWrt LuCI 界面了。使用用户名 `root` 和 _任意_ 密码登入。空密码都行，其实直接点登录就行。
 
 {% note warning %}
 不要点击 `System > Startup`，会回到非开发者模式
@@ -216,7 +220,7 @@ Host 192.168.10.1
 ## 后续操作
 
 路由器是个 Overlay 文件系统，对 ROM 的变更重启并不会重置，并且恢复出厂可以治疗大部分毛病，随意折腾。
-我的目标是 [关闭 DNS 劫持](#关闭%20DNS%20劫持)，有高级需求的可以参考其他刷机教程。
+我的目标是 [关闭 DNS 劫持](#关闭-DNS-劫持)，有高级需求的可以参考其他刷机教程。
 
 ### 添加 SSH 密钥登录
 
