@@ -53,6 +53,16 @@
 }
 
 // 评论文本的空间太大了，缩减一些
-.tk-content-expand p {
+#twikoo .tk-content-expand p {
     margin-block: 0;
+}
+
+// 默认的行高会破坏 ASCII Graph 的对齐
+pre {
+    line-height: 1.4;
+}
+
+// 在 hexo-highlight-shiki.patch 添加的 caption 会导致两层 pre margin 重叠
+pre pre {
+    margin-bottom: 0;
 }
