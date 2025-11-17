@@ -18,7 +18,7 @@ categories:
 
 ## TL;DR
 
-节约时间先列答案，后文再述过程原因
+按照惯例先列答案，后文再述过程原因
 
 ```shellsession
 $ curl http://192.168.10.1/__factory_verify_mode__
@@ -249,13 +249,13 @@ chmod 0600 /etc/dropbear/authorized_keys
 
 ### 关闭 DNS 劫持
 
-在 `/etc/config/rg_firewall` 中删掉几条 `dnsv4_hijack` 的规则。或者直接执行下面这段
+在 `/etc/config/rg_firewall` 中删掉几条 `dnsv4_hijack` 的规则。或者直接执行下面这段（地址按需修改）
 
 ```shell
 iptables  -t nat -D PREROUTING -i br-lan -p udp -m udp --dport 53 -j DNAT --to-destination 192.168.10.1
 ip6tables -t nat -D PREROUTING -i br-lan -p udp -m udp --dport 53 -j DNAT --to-destination fe80::e25d:54ff:fe7c:7f4
 
-ebtables -t broute -D BROUTING -p IPv4 --ip-proto udp --ip-dport 53 -j dnat --to-dst E0:5D:54:7C:07:F4 --dnat-target ACCEPT
+ebtables -t broute -D BROUTING -p IPv4 --ip-proto  udp --ip-dport  53 -j dnat --to-dst E0:5D:54:7C:07:F4 --dnat-target ACCEPT
 ebtables -t broute -D BROUTING -p IPv6 --ip6-proto udp --ip6-dport 53 -j dnat --to-dst E0:5D:54:7C:07:F4 --dnat-target ACCEPT
 ```
 
