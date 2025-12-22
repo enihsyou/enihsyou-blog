@@ -56,3 +56,8 @@ hexo.extend.filter.register("after_post_render", function (data) {
   }
   return data;
 });
+
+// A simple ping endpoint for uptime monitoring services
+hexo.extend.generator.register("ping", function (locals) {
+  return { path: "ping", data: "PONG" };
+});
