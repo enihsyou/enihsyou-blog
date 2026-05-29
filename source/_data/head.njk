@@ -28,11 +28,14 @@
   mobeicanyue/misans-webfont 会优先加载 local 版本导致粗体失效，改用 misans-vf
   使用 jsdelivr CDN 会拖慢其他资源下载速度，改用 npmmirror CDN 优化中国大陆访问
   而 misans-vf 由不在 npmmirror 的白名单里，换成 npm 的 misans 包
-  最后盗用小米汽车用的 CDN，作为小米车主我就用用
+  最后使用小米 MiSans 页面暴露的 CDN
   onload technique used here is suggested by https://web.dev/articles/defer-non-critical-css
  #}
 <link rel="stylesheet"
   href="https://cdn-font.hyperos.mi.com/font/css?family=MiSans_VF:VF:Chinese_Simplify,Latin&display=swap"
+  media="print" onload="this.removeAttribute('onload');this.media='all'" />
+<link rel="stylesheet"
+  href="https://cdn-font.hyperos.mi.com/font/css?family=Misans_TC_VF:VF:Chinese_Traditional_TW&display=swap"
   media="print" onload="this.removeAttribute('onload');this.media='all'" />
 
 {#

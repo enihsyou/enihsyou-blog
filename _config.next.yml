@@ -386,7 +386,7 @@ font:
   global:
     external: false
     # https://github.com/necolas/normalize.css/issues/665
-    family: MiSans, "MiSans VF", -apple-system, system-ui
+    family: MiSans VF, MiSans TC VF, monospace
 
   # Font settings for <code> and code blocks.
   codes:
