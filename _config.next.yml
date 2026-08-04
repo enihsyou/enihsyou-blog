@@ -584,7 +584,7 @@ twikoo:
   visitor: false
   envId: https://twikoo.kokomi.me/
   region: ap-guangzhou
-  jsUrl: https://registry.npmmirror.com/twikoo/1.6.44/files/dist/twikoo.min.js
+  jsUrl: https://registry.npmmirror.com/twikoo/1.7.15/files/dist/twikoo.min.js
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
