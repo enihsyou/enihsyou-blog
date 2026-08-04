@@ -1,0 +1,16 @@
+allowBuilds:
+  cwebp-bin: true
+  gifsicle: true
+  hexo-highlight-shiki: true
+  hexo-util: true
+  jpegtran-bin: true
+  pngquant-bin: true
+  ttf2woff2: true
+
+overrides:
+  fonteditor-core: 2.1.11
+
+patchedDependencies:
+  hexo-next-twikoo: patches/hexo-next-twikoo.patch
+  hexo-theme-next: patches/hexo-theme-next.patch
+  hexo-highlight-shiki: patches/hexo-highlight-shiki.patch
