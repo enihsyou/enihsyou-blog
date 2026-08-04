@@ -230,6 +230,15 @@
                     "value": "application/atom+xml; charset=utf-8"
                 }
             ]
+        },
+        {
+            "source": "/ping",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "text/plain; charset=utf-8"
+                }
+            ]
         }
     ]
 }
