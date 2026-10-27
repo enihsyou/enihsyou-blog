@@ -32,6 +32,9 @@ code_dir: downloads/code
 i18n_dir: :lang
 include:
   - _redirects
+ignore:
+  - '**/.obsidian'
+  - '**/.obsidian/**'
 exclude:
   # 作为源代码使用
   - images/travel-moe-logo.png
