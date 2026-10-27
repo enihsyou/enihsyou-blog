@@ -62,6 +62,18 @@ pre {
     line-height: 1.4;
 }
 
+main {
+    /* ss01: Number-specific punctuation
+       case: Upper case
+       thum: Monospaced numbers */
+    font-feature-settings: "ss01", "case", "thum";
+
+    pre, code {
+        /* calt: Contains all ligatures */
+        font-feature-settings: "calt";
+    }
+}
+
 // 在 hexo-highlight-shiki.patch 添加的 caption 会导致两层 pre margin 重叠
 pre pre {
     margin-bottom: 0;
