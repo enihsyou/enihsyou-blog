@@ -458,10 +458,6 @@ fancybox: false
 # For more information: https://medium-zoom.francoischalifour.com
 mediumzoom: false
 
-# Vanilla JavaScript plugin for lazyloading images.
-# For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: true
-
 # Automatically insert whitespace between CJK and half-width characters.
 # For more information: https://github.com/vinta/pangu.js
 # Server-side plugin: https://github.com/next-theme/hexo-pangu
@@ -578,7 +574,7 @@ twikoo:
   visitor: false
   envId: https://twikoo.kokomi.me/
   region: ap-guangzhou
-  jsUrl: https://registry.npmmirror.com/twikoo/1.7.15/files/dist/twikoo.min.js
+  jsUrl: https://unpkg.com/twikoo@1.7.15/dist/twikoo.min.js
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
@@ -637,4 +633,4 @@ vendors:
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-  custom_cdn_url: https://registry.npmmirror.com/${npm_name}/${version}/files/${npm_file}
+  custom_cdn_url: https://unpkg.com/${npm_name}@${version}/${npm_file}

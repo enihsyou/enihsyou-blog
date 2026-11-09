@@ -144,7 +144,7 @@ markdown:
     permalinkClass: header-anchor
     permalinkSymbol: ¶
   images:
-    lazyload: true
+    lazyload: false
     prepend_root: true
     post_asset: true
 

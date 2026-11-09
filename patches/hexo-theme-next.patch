@@ -1,17 +1,17 @@
 diff --git a/_vendors.yml b/_vendors.yml
-index 71311b52a53e331ba4abd441f3f1191198f66651..dfaa621d714ce9e1a67cd73c24478fd35232f287 100644
+index 81a6c8fe365402911c3edd268a69c30c63873747..5eace588c17a88bbdcdb65f8b5df05fdf7bae497 100644
 --- a/_vendors.yml
 +++ b/_vendors.yml
-@@ -12,6 +12,7 @@ fontawesome:
+@@ -7,6 +7,7 @@ fontawesome:
    file: css/all.min.css
    alias: font-awesome
-   integrity: sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=
+   integrity: sha256-4Lad8m4ZWW1Lgb9+sMVLYEfnIh7BjV1NQMEe79Pviks=
 +  lazy: true
  prism:
    name: prismjs
    version: 1.30.0
 diff --git a/scripts/events/lib/vendors.js b/scripts/events/lib/vendors.js
-index 350df6793d7d753932bb7393dd8c49163dbd0691..f288dca27ea083bceebdca5ff8dd6269e403cd4a 100644
+index c34c82ef93a4e413a8627fc0a73853ac4e9cf83b..c940fde83683e64dcdb502810a7c84126444effc 100644
 --- a/scripts/events/lib/vendors.js
 +++ b/scripts/events/lib/vendors.js
 @@ -49,6 +49,7 @@ module.exports = hexo => {
@@ -19,17 +19,17 @@ index 350df6793d7d753932bb7393dd8c49163dbd0691..f288dca27ea083bceebdca5ff8dd6269
      vendors[key] = {
        url      : links[plugins] || links.cdnjs,
 +      lazy     : value.lazy || false,
-       integrity: value.integrity
-     };
-   }
+       // Subresource Integrity only adds value for cross-origin CDN assets.
+       // The hashes in _vendors.yml are computed for the CDN builds; when
+       // self-hosting (`plugins: local`) the files are served same-origin and
 diff --git a/scripts/helpers/engine.js b/scripts/helpers/engine.js
-index 6b2f703ac4cf88ed092927e697c7d7068e17791f..b94d872639910d005e6af995724071eb18a7c6bf 100644
+index 13b1e7cf39b0984c91e124f0454dabb939e4d361..ccc3c7bcdb93ad1532e40d66b06d9443c91f15c8 100644
 --- a/scripts/helpers/engine.js
 +++ b/scripts/helpers/engine.js
-@@ -36,9 +36,12 @@ hexo.extend.helper.register('next_js', function(file, {
- });
- 
- hexo.extend.helper.register('next_vendors', function(name) {
+@@ -41,9 +41,12 @@ hexo.extend.helper.register('next_vendors', function(name, {
+   async = false,
+   defer = !async
+ } = {}) {
 -  const { url, integrity } = this.theme.vendors[name];
 +  const { url, integrity, lazy = false } = this.theme.vendors[name];
    const type = url.endsWith('css') ? 'css' : 'js';
