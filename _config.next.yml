@@ -173,13 +173,7 @@ links_settings:
   # Available values: block | inline
   layout: block
 
-links:
-  ? >
-    <img alt="Written By a Human Not By AI Badge" width="120"
-      src="/images/Written-By-a-Human-Not-By-AI-Badge.svg" 
-      class="light-mode-invert-svg">
-  : https://notbyai.fyi
-  
+links:  
   ? >
     <img alt="开往-友链接力" width="120" 
       src="https://www.travellings.cn/assets/logo.svg"
