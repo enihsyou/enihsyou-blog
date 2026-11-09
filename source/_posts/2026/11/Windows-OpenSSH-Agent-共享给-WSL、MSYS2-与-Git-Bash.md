@@ -102,7 +102,7 @@ MSYS2 能直接调用 Windows 的 EXE，但用它工具链构建出来的程序�
 
 所以得保留 MSYS2 原生 OpenSSH，让它的 `SSH_AUTH_SOCK` 接到 Windows 那边。那么就需要有一个工具来把 Windows 的 pipe 转换成 Linux 的 socket。一番搜索发现了 [albertony/npiperelay](https://github.com/albertony/npiperelay) 这个桥接工具。
 
-它的文档上刚好有一段教你如何连接至 Windows SSH Agent，我调整之后变成这样，让 Bash Profile 去加载它。
+它的文档上刚好有一段教你如何连接至 Windows SSH Agent，我调整之后变成这样，让 Bash Profile 去加载它。[完整文件放在这里](https://github.com/enihsyou/dotfiles/blob/64bd90c0879d086ec26bed0d16574986bcd2a050/system/MSYS2/profile.d/msys2-ssh-agent.sh)。
 
 ```shell
 #!/usr/bin/env sh
@@ -158,6 +158,8 @@ winget install --id albertony.npiperelay --exact
 
 在 WSL 创建两个文件：
 
+[完整文件放在这里](https://github.com/enihsyou/dotfiles/blob/64bd90c0879d086ec26bed0d16574986bcd2a050/system/WSL2/systemd/user/named-pipe-ssh-agent.socket)。
+
 ```ini title="~/.config/systemd/user/named-pipe-ssh-agent.socket"
 [Unit]
 Description=SSH Agent provided by Windows named pipe
@@ -172,6 +174,8 @@ Accept=yes
 [Install]
 WantedBy=sockets.target
 ```
+
+[完整文件放在这里](https://github.com/enihsyou/dotfiles/blob/64bd90c0879d086ec26bed0d16574986bcd2a050/system/WSL2/systemd/user/named-pipe-ssh-agent%40.service)。
 
 ```ini title="~/.config/systemd/user/named-pipe-ssh-agent@.service"
 [Unit]
@@ -194,7 +198,7 @@ systemctl --user enable --now named-pipe-ssh-agent.socket
 export SSH_AUTH_SOCK="${SSH_AUTH_SOCK:-${XDG_RUNTIME_DIR%/}/ssh/ssh-agent.sock}"
 ```
 
-就能在 `ssh-add -L` 的输出里看到 Windows 管理的私钥，最后把 `export` 那行加入自己的 shell 启动文件。
+就能在 `ssh-add -L` 的输出里看到 Windows 管理的私钥，最后把 `export` 那行加入自己的 shell 启动文件。[完整文件放在这里](https://github.com/enihsyou/dotfiles/blob/64bd90c0879d086ec26bed0d16574986bcd2a050/shell/bash/bashrc-wsl2.sh)。
 
 ## PuTTY
 
