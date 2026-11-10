@@ -574,7 +574,7 @@ twikoo:
   visitor: false
   envId: https://twikoo.kokomi.me/
   region: ap-guangzhou
-  jsUrl: https://unpkg.com/twikoo@1.7.15/dist/twikoo.min.js
+  jsUrl: https://registry.npmmirror.com/twikoo/1.7.15/files/dist/twikoo.min.js
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
@@ -633,4 +633,4 @@ vendors:
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-  custom_cdn_url: https://unpkg.com/${npm_name}@${version}/${npm_file}
+  custom_cdn_url: https://registry.npmmirror.com/${npm_name}/${version}/files/${npm_file}
